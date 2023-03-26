@@ -8,14 +8,14 @@ const Contact = () => {
   return (
     <section className="contact">
       <div data-aos="fade-up" className="contact-text">
-        <h2>SAVOLLAR BO’LSA MENEDJERGA MUROJAAT QILISHINGIZ MUMKIN</h2>
+        <h2 className="mezzardBold">SAVOLLAR BO’LSA MENEDJERGA MUROJAAT QILISHINGIZ MUMKIN</h2>
         <div className="telegram-contact">
           <a href="#">
             <Image src={TelegramIcon} alt="TelegramIcon" width={37} />
-            <p>@ARASHOV_TRADER</p>
+            <p className="mezzardBold">@ARASHOV_TRADER</p>
           </a>          
         </div>
-        <p className='phone-number'>+998 (95) 505-11-99</p>
+        <p className='phone-number mezzardBold'>+998 (95) 505-11-99</p>
       </div>
       <div className="contact-image">
         <Image data-aos="fade-left" src={ContacrImage} alt="Contact us" />

@@ -60,7 +60,7 @@ const cardData = [
      {
        title: "VIP",
        price: "10000$",
-       discount:"200$",
+       discount:"500$",
        info:"*Depozitingizda 20.000$ pul bo’lishi kerak Dars davomida shu depozit bilan kurs  to'lovlarini ham  chiqarib  olasiz",
        description: [
         "Blockchain, Kriptovalyuta",
@@ -127,7 +127,7 @@ const PriceData = () => {
           <div className="card-title">
             <div className={index !== 3 ? "bright1" : "bright1 bringht4"}></div>
             {index === 3 && <Image src={corona} className="corona" width={20} />}
-            <p>{card.title}</p>
+            <p className="mezzardBold">{card.title}</p>
           </div>
             <div className="card-content">
               <ul className="card-description">

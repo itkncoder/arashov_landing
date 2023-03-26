@@ -20,7 +20,7 @@ const Price = () => {
           <Image src={Uzcard} alt="Uzcard" />
      </div>
      <div className="payment-crypto">
-      <Link href="./">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>
+      <Link href="./" className="mezzardBold">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>
      </div>
     </section>
   );

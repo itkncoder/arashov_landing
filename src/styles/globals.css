@@ -12,12 +12,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "MezzardBold";
+  src: url("../assets/MazzardH-Regular/MazzardH-Bold.otf");
+}
+
+.mezzardBold {
+  font-family: 'MezzardBold' !important;
+  font-weight: bold !important;
+}
+
 *{
   margin: 0;
   padding: 0;
   max-width: 100%;
   box-sizing: border-box;
   font-family: Mazzard;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 img {
   width: fit-content;
@@ -26,7 +41,6 @@ img {
 body{
   background-color: #000b1d;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
 }
 
 .home__btn{
@@ -377,7 +391,10 @@ body{
 }
 .main__left__header{
   min-width: 550px;
-  margin-top: -100px;
+  margin-top: -320px;
+}
+.main__left__header h1 {
+  font-weight: 900 !important;
 }
 
 .main__left h1 {
@@ -550,6 +567,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 35px 35px 75px 35px;
   background-color: #0B0E15;
 }
@@ -703,9 +721,8 @@ input {
 }
 .card-footer .buy{
   width: 100%;
-  background-image: linear-gradient(to right, #003dff, #006eff);
+  background-image: linear-gradient(to right, #003dff, #00a6ff);
   border-radius: 0px  0px  20px 20px ;
-  box-shadow: inset -4px  4px  4px #0087ff;
   font-size: 1.3rem;
   color: #ffff;
   padding: 10px 0;
@@ -718,7 +735,7 @@ input {
   }
 }
 .card-footer .buy:hover {
-  background-image: linear-gradient(to right, #002ec5, #0058cb);
+  background-image: linear-gradient(to right, #0052c5, #0080c6);
   cursor: pointer;
 }
 .card-footer .buy p{
@@ -802,7 +819,7 @@ input {
 }
 .card:nth-child(4) .video-course{
    padding: 0 15px;
-   background: -webkit-linear-gradient(45deg,#f1d902, #f1d902) !important;
+   background: -webkit-linear-gradient(45deg,#FEEB04, #f1d902) !important;
    font-size: .62rem !important;
    text-align: center;
  -webkit-background-clip: text;
@@ -816,8 +833,7 @@ input {
   margin-top: 30px;
 }
 .nthfour {
-  background-image: linear-gradient(to right, #e2e20c, #f3f346) !important;
-  box-shadow: inset -4px  5px  4px #ffc23e !important;
+  background-image: linear-gradient(to bottom, #FCFE38, #DFAA01) !important;
   color: #000 !important;
 }
 .bringht4 {
@@ -825,7 +841,7 @@ input {
   filter: blur(45px) !important;
 }
 .nthfour:hover {
-  background-image: linear-gradient(to right, #a0a001, #cccc22) !important;
+  background-image: linear-gradient(to bottom, #d6da1a, #cb9b00) !important;
 }
 .video-course-four {
   padding: 0 15px;
@@ -1071,7 +1087,7 @@ input {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .usefull__box {

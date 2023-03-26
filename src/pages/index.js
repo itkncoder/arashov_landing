@@ -3,6 +3,7 @@ import Head from "next/head"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react"
+import Layout from "@/layout/layout"
 
 function Home() {
 
@@ -11,7 +12,7 @@ function Home() {
     }, [])
 
     return (
-        <>
+        <Layout>
             <Head>
                 <title>ARASHOV</title>
                 <meta name="description" content="ARASHOV" />
@@ -28,7 +29,7 @@ function Home() {
                 <Contact />
                 <Footer />
             </main>
-        </>
+        </Layout>
     );
 }
 

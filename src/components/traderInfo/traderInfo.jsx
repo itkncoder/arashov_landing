@@ -7,24 +7,24 @@ const TraderInfo = () => {
           <div className='tradeInfo'>
                <div data-aos="fade-up" className="Infobox">
                     <div className="infoTextBox">
-                         <div className="boxTitle">TRADER KIM?</div>
+                         <div className="boxTitle mezzardBold">TRADER KIM?</div>
 
                          <div className="boxText">
-                              <p>Trader:</p>
+                              <p className="mezzardBold">Trader:</p>
                               <div className="card">
                                    <div className="line"></div>
-                                   <p>Moliyaviy bozorni tahlil qiladi</p>
+                                   <p className="mezzardBold">Moliyaviy bozorni tahlil qiladi</p>
                               </div>
                               <div className="card">
                                    <div className="line"></div>
-                                   <p>Aktivlarni sotib oladi va sotadi</p>
+                                   <p className="mezzardBold">Aktivlarni sotib oladi va sotadi</p>
                               </div>
                               <div className="card">
                                    <div className="line"></div>
-                                   <p>Narxlar farqidan daromad oladi</p>
+                                   <p className="mezzardBold">Narxlar farqidan daromad oladi</p>
                               </div>
                          </div>
-                         <div className="linearCard">
+                         <div className="linearCard mezzardBold">
                          Crypto Trader - Birjalarda kriptovalyutalar bilan savdo qiluvchi  shaxs.U  texnik tahlil, fundamental tahlil va turli  xil savdo strategiyalardan foydalanadi
                          </div>
                     </div>

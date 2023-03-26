@@ -4,8 +4,8 @@ import Image from "next/image"
 
 const Competition = () => {
      return (
-          <section className="competition">
-               <div className="competition__title">COBALT AVTOMOBILINI YUTIB OLING</div>
+          <section className="competition wrapper">
+               <div className="competition__title mezzardBold">COBALT AVTOMOBILINI YUTIB OLING</div>
                <div className="competition-container">
                     <div className="competition-content">
                          <div className="competition-image">

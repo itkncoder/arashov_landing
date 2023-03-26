@@ -12,8 +12,8 @@ export default function Document() {
         <Main />
         <NextScript />
 
-        <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
-        <div id="coinmarketcap-widget-marquee" coins="1,825,1027,1839,74,52,3408,2" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div>
+        {/* <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+        <div id="coinmarketcap-widget-marquee" coins="1,825,1027,1839,74,52,3408,2" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div> */}
       </body>
     </Html>
   )
