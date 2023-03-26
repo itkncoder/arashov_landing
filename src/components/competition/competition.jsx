@@ -1,4 +1,4 @@
-import React from "react";
+import {memo} from "react";
 import Car from '@/assets/images/car.png'
 import Image from "next/image"
 
@@ -9,9 +9,9 @@ const Competition = () => {
                <div className="competition-container">
                     <div className="competition-content">
                          <div className="competition-image">
-                              <Image src={Car} alt="car" />
+                              <Image data-aos="fade-left" src={Car} alt="car" />
                          </div>
-                         <div className="competition-text">
+                         <div data-aos="fade-right" className="competition-text">
                               <p className="competition-description">
                                    ONLINE VA OFFLINE KURSIMIZNI TO’LIQ O’TGAN HAR BIR KISHI AVTOMATIK RAVISHDA
                                    <span style={{ color: "#42a7ff" }}> COBALT</span> AVTOMOBILINI  O'YININING ISHTIROKCHISIGA  AYLANADI.
@@ -25,5 +25,5 @@ const Competition = () => {
      );
 };
 
-export default Competition;
+export default memo(Competition);
 

@@ -3,6 +3,7 @@ import moneyImage from '@/assets/images/money.png'
 import airImage from '@/assets/images/air.png'
 import growthImage from '@/assets/images/growthImage.png'
 import BitcoinImage from '@/assets/images/991959.png'
+import {memo} from "react";
 
 const Usefull = () => {
   return (
@@ -29,4 +30,4 @@ const Usefull = () => {
   )
 }
 
-export default Usefull
+export default memo(Usefull)

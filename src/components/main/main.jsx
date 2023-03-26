@@ -2,11 +2,12 @@ import MainImage from "@/assets/images/MainImage.png"
 import MainImage2 from '@/assets/images/MainImage2.png'
 import CheckIcon from '@/assets/images/checkIcon.png'
 import Image from "next/image"
+import {memo} from "react";
 
 const Main = () => {
   return (
     <main className="main">
-     <div className="main__left">
+     <div data-aos="fade-left" className="main__left">
        <div className="main__left__header">
        <h1>KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING</h1>
        <p>Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang</p>
@@ -14,7 +15,7 @@ const Main = () => {
        </div>
        
      </div>
-     <div className="main__right">
+     <div data-aos="fade-right" className="main__right">
        <div className="background__bright"></div>
        <div className="background__shadow"></div>
        <div className="name">
@@ -29,4 +30,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default memo(Main)

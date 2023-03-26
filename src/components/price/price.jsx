@@ -5,6 +5,8 @@ import Tether from '@/assets/images/Tether_Logo.svg.png'
 import Humo from '@/assets/images/system-humo_w.png'
 import Uzcard from '@/assets/images/uzcard.png'
 import Image from "next/image"
+import {memo} from "react";
+import Link from "next/link"
 
 const Price = () => {
   return (
@@ -18,12 +20,12 @@ const Price = () => {
           <Image src={Uzcard} alt="Uzcard" />
      </div>
      <div className="payment-crypto">
-      <p>KRIPTOVALYUTA ORQALI TO’LOV QILISH</p>
+      <Link href="./">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>
      </div>
     </section>
   );
 };
 
-export default Price
+export default memo(Price)
 
 

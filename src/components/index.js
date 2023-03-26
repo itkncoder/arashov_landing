@@ -1,3 +1,5 @@
+import dynamic from 'next/dynamic'
+
 export {default as Navbar} from './navbar/navbar'
 export {default as Main} from './main/main'
 export {default as Usefull} from './usefull/usefull'
@@ -6,4 +8,3 @@ export {default as Competition} from './competition/competition'
 export {default as Price} from './price/price'
 export {default as Contact} from './contact/contact'
 export {default as Footer} from './footer/footer'
-export {default as PriceCoin} from './price-coin/price-coin'

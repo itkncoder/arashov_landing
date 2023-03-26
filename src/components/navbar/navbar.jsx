@@ -1,5 +1,6 @@
 import logo from '@/assets/images/Logo.png'
 import Image from "next/image"
+import {memo} from "react";
 
 const Navbar = () => {
   return (
@@ -15,4 +16,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default memo(Navbar)

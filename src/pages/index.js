@@ -1,7 +1,15 @@
-import { Competition, Contact, Footer, Main, Navbar, Price, PriceCoin, TraderInfo, Usefull } from "@/components";
+import { Competition, Contact, Footer, Main, Navbar, Price, TraderInfo, Usefull } from "@/components";
 import Head from "next/head"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react"
 
 function Home() {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
         <>
             <Head>
@@ -18,7 +26,6 @@ function Home() {
                 <Competition />
                 <Price />
                 <Contact />
-                <PriceCoin />
                 <Footer />
             </main>
         </>

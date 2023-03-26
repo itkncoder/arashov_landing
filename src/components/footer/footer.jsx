@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import Logo from '@/assets/images/Logo.png'
 import SocialLink from './socialLink';
 import TelegramIcon from '@/assets/images/telegram-icon.png'
@@ -12,7 +12,7 @@ const Footer = () => {
   const date = useState(new Date().getFullYear())
 
   return (
-    <footer className="footer">
+    <footer data-aos="fade-down" className="footer">
       <div className="footer-content">
         <div className="logo">
           <Image src={Logo} alt="Logo" />
@@ -32,4 +32,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

@@ -1,10 +1,11 @@
 import InfoImage from '@/assets/images/tradeInfoimage.png'
 import Image from "next/image"
+import {memo} from "react";
 
 const TraderInfo = () => {
      return (
           <div className='tradeInfo'>
-               <div className="Infobox">
+               <div data-aos="fade-up" className="Infobox">
                     <div className="infoTextBox">
                          <div className="boxTitle">TRADER KIM?</div>
 
@@ -36,4 +37,4 @@ const TraderInfo = () => {
      )
 }
 
-export default TraderInfo
+export default memo(TraderInfo)

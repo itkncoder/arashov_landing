@@ -1,4 +1,4 @@
-import React from 'react'
+import {memo} from 'react'
 import Image from "next/image"
 
 const SocialLink = ({link,img}) => {
@@ -9,4 +9,4 @@ const SocialLink = ({link,img}) => {
   )
 }
 
-export default SocialLink
+export default memo(SocialLink)

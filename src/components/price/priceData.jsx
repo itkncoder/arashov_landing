@@ -1,3 +1,8 @@
+import {memo} from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Autoplay } from "swiper";
+
 const cardData = [
      {
        title: "PREMIUM",
@@ -77,37 +82,49 @@ const cardData = [
 
 const PriceData = () => {
   return (
-     <div className="card-container">
-     {cardData.map((card, index) => (
-       <div key={index} className="card">
-       <div className="card-title">
-       <div className="bright1"></div>
-       <p>{card.title}</p>
-       </div>
-         <div className="card-content">
-           <ul className="card-description">
-           {cardData[index].description.map((item, i)=>(
-               <li>{item}</li>
-     ))}     
-           </ul>
-
-           <div className="video-course">{card.info}</div>
-           
-          <div className="card-footer">
-         <h4 className='discount'>{card.discount}</h4>
-           <p className="card-price">{card.price}</p>
-          <div className="buy">
-          {index !==3 ? <p><a href="./">SOTIB OLISH</a></p>:<p><a href="./" className="nthfour">ULANISH</a></p> }
-          {index ===3 ? <div className='mask'></div> : null}
+     <div data-aos="fade-up" className="card-container">
+     <Swiper
+      breakpoints={{
+        850: {
+          slidesPerView: 3.5,
+        }
+      }}
+      spaceBetween={5}
+      slidesPerView={1}
+     >
+      {cardData.map((card, index) => (
+        <SwiperSlide>
+          <div key={index} className="card">
+          <div className="card-title">
+          <div className="bright1"></div>
+          <p>{card.title}</p>
           </div>
-          
-         </div>
-         </div>
-       </div>
-     ))}
+            <div className="card-content">
+              <ul className="card-description">
+              {cardData[index].description.map((item, i)=>(
+                <li>{item}</li>
+              ))}     
+              </ul>
+
+              <div className="video-course">{card.info}</div>
+              
+              <div className="card-footer">
+            <h4 className='discount'>{card.discount}</h4>
+              <p className="card-price">{card.price}</p>
+              <div className="buy">
+              {index !==3 ? <p><a href="./">SOTIB OLISH</a></p>:<p><a href="./" className="nthfour">ULANISH</a></p> }
+              {index ===3 ? <div className='mask'></div> : null}
+              </div>
+              
+            </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+     </Swiper>
      
    </div>
   )
 }
 
-export default PriceData
+export default memo(PriceData)

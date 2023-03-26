@@ -1,8 +1,9 @@
 import Image from "next/image"
+import {memo} from "react";
 
 const UsefullDetail = ({title,description,img}) => {
   return (
-    <div className='usefull__box'>
+    <div data-aos="fade-down" className='usefull__box'>
     <div className="imageBox">
      <Image src={img} alt="img" width={30} />
     </div>
@@ -12,4 +13,4 @@ const UsefullDetail = ({title,description,img}) => {
   )
 }
 
-export default UsefullDetail
+export default memo(UsefullDetail)

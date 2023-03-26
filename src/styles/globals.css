@@ -254,9 +254,9 @@ body{
 
  .footer {
   background-color: #000b1d;
-  padding: 50px;
+  padding: 0 0 100px 0;
   text-align: center;
-  height: 300px;
+  height: auto;
 }
 
 .footer-content {
@@ -265,6 +265,10 @@ body{
   flex-wrap: wrap;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.login-button:hover {
+  color: rgb(188, 188, 188);
 }
 
 .logo {
@@ -601,7 +605,7 @@ display: none;
   border-radius: 20px;
   box-shadow: inset -3px -5px 3px #13243f;
   height: 650px;
-  width: 400px;
+  max-width: 400px;
 }
 .card-container .card:nth-child(4){
   height: 700px;
@@ -713,9 +717,14 @@ margin-top: -15px;
   border-radius: 20px;
   padding: 15px;
 }
-.payment-crypto  p{
+.payment-crypto  a{
+  color: #fff;
+  text-decoration: none;
   font-size: 1.4rem;
   font-weight: 600;
+}
+.payment-crypto  a:hover {
+  color: rgb(203, 203, 203);
 }
 .video-course{
   padding: 0 15px;
