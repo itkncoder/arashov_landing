@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+@font-face {
+  font-family: 'Mazzard';
+  src: local('Mazzard H Regular'), local('Mazzard-H-Regular'),
+      url('../assets/MazzardH-Regular/MazzardH-Regular.woff2') format('woff2'),
+      url('../assets/MazzardH-Regular/MazzardH-Regular.woff') format('woff'),
+      url('../assets/MazzardH-Regular/MazzardH-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 *{
   margin: 0;
   padding: 0;
   max-width: 100%;
   box-sizing: border-box;
+  font-family: Mazzard;
 }
 img {
   width: fit-content;
@@ -625,8 +634,8 @@ input {
   height: 700px;
   max-width: 400px;
 }
-.card-container .card:nth-child(4){
-  height: 800px !important;
+.card-4 {
+  height: 750px !important;
 }
 
 .bright1{
@@ -691,7 +700,6 @@ input {
   font-size: 12px;
 }
 .card-footer{
-  
 }
 .card-footer .buy{
   width: 100%;
@@ -706,7 +714,7 @@ input {
 }
 @media screen and (min-width: 880px) {
   .swiper {
-    height: 820px !important;
+    height: 780px !important;
   }
 }
 .card-footer .buy:hover {
@@ -736,6 +744,9 @@ input {
   color: #000 !important;
 }
 .card-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;

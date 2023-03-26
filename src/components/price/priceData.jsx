@@ -123,7 +123,7 @@ const PriceData = () => {
      >
       {cardData.map((card, index) => (
         <SwiperSlide>
-          <div key={index} className="card">
+          <div key={index} className={index === 3 ? "card card-4" : "card"}>
           <div className="card-title">
             <div className={index !== 3 ? "bright1" : "bright1 bringht4"}></div>
             {index === 3 && <Image src={corona} className="corona" width={20} />}
