@@ -237,6 +237,9 @@ body{
       margin-top: 15px;
       font-weight: 600;
  }
+ .phone-number:hover {
+  color: rgb(205, 205, 205);
+ }
  @media screen and (max-width: 1230px){
       .contact{
            width: 90%;

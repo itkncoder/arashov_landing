@@ -4,7 +4,7 @@ import {memo} from "react";
 
 const TraderInfo = () => {
      return (
-          <div className='tradeInfo'>
+          <div className='tradeInfo' id="traderinfo">
                <div data-aos="fade-up" className="Infobox">
                     <div className="infoTextBox">
                          <div className="boxTitle mezzardBold">TRADER KIM?</div>

@@ -11,7 +11,7 @@ const Main = () => {
        <div className="main__left__header">
         <h1 className="mezzardBold">KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING</h1>
         <p>Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang</p>
-        <button className='learn__more'>BATAFSIL MA’LUMOT</button>
+        <a href="#traderinfo"><button className='learn__more'>BATAFSIL MA’LUMOT</button></a>
        </div>
        
      </div>
