@@ -631,7 +631,7 @@ input {
   background-color: #0d182b;
   border-radius: 20px;
   box-shadow: inset -3px -5px 3px #13243f;
-  height: 700px;
+  height: 650px;
   max-width: 400px;
 }
 .card-4 {
@@ -752,9 +752,8 @@ input {
   font-weight: 500;
 }
 .sponsor{
-  width: 1050px;
   height: 60px;
-  margin-left: 60px;
+  margin: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
