@@ -1,8 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
 
 *{
   margin: 0;
   padding: 0;
+  max-width: 100%;
   box-sizing: border-box;
 }
 img {
@@ -316,7 +321,7 @@ body{
 @media screen and (max-width: 768px) {
  .footer{
    padding: 10px;
-   padding-top: 50px;
+   padding-top: 150px;
  }
   .footer-content {
     flex-direction: column;
@@ -332,6 +337,9 @@ body{
  }
 }
 
+.swiper {
+  height: fit-content !important;
+}
 
 /* Main section styling */
 .main {
@@ -529,7 +537,7 @@ display: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px ;
+  padding: 35px 35px 75px 35px;
 }
 
 .navbar__logo img {
@@ -588,10 +596,15 @@ display: none;
 }
 .card-container{
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  align-items: center;
+  padding: 0px 50px;
+}
+@media screen and (max-width: 780px) {
+  .card-container {
+    padding: 0;
+  }
 }
 .card-content{
   height: 90%;
@@ -600,15 +613,15 @@ display: none;
   justify-content: space-between;
 }
 .card-container .card{
-  margin: 0 20px;
+  margin: 0 10px;
   background-color: #0d182b;
   border-radius: 20px;
   box-shadow: inset -3px -5px 3px #13243f;
-  height: 650px;
+  height: 700px;
   max-width: 400px;
 }
 .card-container .card:nth-child(4){
-  height: 700px;
+  height: 800px !important;
 }
 
 .bright1{
@@ -651,42 +664,48 @@ display: none;
   line-height: 17px;
 }
 .card-footer{
-
-  display: grid;
-  place-items: center;
+  
 }
 .card-footer .buy{
   width: 100%;
-  height: 50px;
   background-color: #003dff;
   border-radius: 0px  0px  20px 20px ;
   box-shadow: inset -4px  4px  4px #0087ff;
   font-size: 1.3rem;
   color: #ffff;
+  padding: 10px 0;
   font-weight: 600;
   overflow: hidden;
+}
+@media screen and (min-width: 880px) {
+  .swiper {
+    height: 820px !important;
+  }
 }
 .card-footer .buy:hover {
   background-color: #002cbd;
 }
 .card-footer .buy p{
+  color: white;
   text-align: center;
-  margin-top: 10px;
 }
-.card-footer .buy p a {
+.card-footer .buy p .not4 {
   color: white;
   text-decoration: none;
 }
-.card-footer .buy .mask{
-width: 100%;
-height: 100%;
-background-color: #bc9d23;
-margin-top: -15px;
+.fourulanish {
+  color: rgb(45, 45, 45);
+  text-decoration: none;
 }
-.card-container .card:nth-child(4) .card-footer .buy{
+.card-footer .buy .mask{
+  width: 100%;
+  height: 100%;
+  background-color: #bc9d23 !important;
+}
+.card-container .card:nth-child(3) .card-footer .buy{
   background-color: #fffe59;
   box-shadow: inset -4px  5px  4px #ffc23e;
-  color: #000;
+  color: #000 !important;
 }
 .card-price{
   text-align: center;
@@ -745,8 +764,8 @@ margin-top: -15px;
 }
 .card:nth-child(4) .video-course{
    padding: 0 15px;
-   background: -webkit-linear-gradient(45deg,#f1d902, #f1d902);
-   font-size: .62rem;
+   background: -webkit-linear-gradient(45deg,#f1d902, #f1d902) !important;
+   font-size: .62rem !important;
    text-align: center;
  -webkit-background-clip: text;
 }
@@ -759,7 +778,23 @@ margin-top: -15px;
   margin-top: 30px;
 }
 .nthfour {
-  color: rgb(22, 22, 22) !important;
+  background-color: #fffe59 !important;
+  box-shadow: inset -4px  5px  4px #ffc23e !important;
+  color: #000 !important;
+}
+.bringht4 {
+  background-color: #bca91a !important;
+  filter: blur(60px) !important;
+}
+.nthfour:hover {
+  background-color: #cfcf23 !important;
+}
+.video-course-four {
+  padding: 0 15px;
+  background: -webkit-linear-gradient(45deg,#f1d902, #f1d902) !important;
+  font-size: .7rem !important;
+  text-align: center;
+  -webkit-background-clip: text !important;
 }
 @media screen and (max-width: 1290px){
   .card-container{
@@ -996,7 +1031,8 @@ margin-top: -15px;
   background: -webkit-linear-gradient(45deg,#81d7f6, #0028b9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .usefull__box {
