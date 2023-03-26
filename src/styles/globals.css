@@ -33,6 +33,7 @@
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
+  width: fit-content;
 }
 img {
   width: fit-content;
@@ -789,6 +790,7 @@ input {
   margin: 50px auto;
   text-align: center;
   border-radius: 20px;
+  transition: .3s all;
   padding: 15px;
 }
 .payment-crypto  a{
@@ -797,8 +799,10 @@ input {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.payment-crypto  a:hover {
+.payment-crypto:hover {
   color: rgb(203, 203, 203);
+  background-color: #0065d9;
+  border: 4px solid #0065d9;
 }
 .video-course{
   padding: 0 15px;
