@@ -2,6 +2,8 @@ import {memo} from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from "swiper";
+import corona from "@/assets/images/corona.png"
+import Image from "next/image"
 
 const cardData = [
      {
@@ -57,8 +59,8 @@ const cardData = [
      },
      {
        title: "VIP",
-       price: "200$",
-       discount:"5000$",
+       price: "10000$",
+       discount:"200$",
        info:"*Depozitingizda 20.000$ pul bo’lishi kerak Dars davomida shu depozit bilan kurs  to'lovlarini ham  chiqarib  olasiz",
        description: [
         "Blockchain, Kriptovalyuta",
@@ -123,8 +125,9 @@ const PriceData = () => {
         <SwiperSlide>
           <div key={index} className="card">
           <div className="card-title">
-          <div className={index !== 3 ? "bright1" : "bright1 bringht4"}></div>
-          <p>{card.title}</p>
+            <div className={index !== 3 ? "bright1" : "bright1 bringht4"}></div>
+            {index === 3 && <Image src={corona} className="corona" width={20} />}
+            <p>{card.title}</p>
           </div>
             <div className="card-content">
               <ul className="card-description">
@@ -133,7 +136,7 @@ const PriceData = () => {
               ))}     
               </ul>
 
-              <div className={index === 3 ? "video-course-four" : "video-course"}>{card.info}</div>
+              {index !== 2 && <div className={index === 3 ? "video-course-four" : "video-course"}>{card?.info}</div>}
               
               <div className="card-footer">
             <h4 className='discount'>{card.discount}</h4>
