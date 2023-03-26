@@ -350,6 +350,7 @@ body{
   align-items: center;
   justify-content: center;
   padding: 0rem 100px;
+  background-color: #0B0E15;
 }
 
 .main__left,
@@ -538,6 +539,7 @@ display: none;
   justify-content: space-between;
   align-items: center;
   padding: 35px 35px 75px 35px;
+  background-color: #0B0E15;
 }
 
 .navbar__logo img {
@@ -561,7 +563,7 @@ display: none;
  cursor: pointer;
 }
 .register-button:hover {
- background-color: #001d76;
+ background-color: #00238c !important;
  box-shadow: inset -4px -4px 4px hsla(255, 94%, 75%, 0), inset 1px 4px 5px hsla(239, 100%, 78%, 0);
 }
 
