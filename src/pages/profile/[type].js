@@ -30,7 +30,7 @@ function App() {
       password: data.password
     }
 
-    axios.post("https://arashovplatform.onrender.com/api/v1/auth/register/", obj).then(res => alert(true))
+    axios.post("https://arashovplatform.onrender.com/api/v1/auth/register/", obj).then(res => alert("auth"))
   };
 
   const onLogin = async (data) => {
