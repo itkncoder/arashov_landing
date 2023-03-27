@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Image from "next/image"
 import Link from "next/link"
-import logo from "@/assets/images/logo.png"
+import logo from "@/assets/images/Logo.png"
 
 function App() {    
   const { register, handleSubmit } = useForm()
