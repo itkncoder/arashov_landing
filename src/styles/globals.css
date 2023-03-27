@@ -377,7 +377,7 @@ body{
   align-items: center;
   justify-content: center;
   padding: 0rem 100px;
-  background-color: #0B0E15;
+  background-color: #0c111c;
 }
 
 .main__left,
@@ -573,7 +573,7 @@ input {
   align-items: center;
   width: 100%;
   padding: 35px 35px 75px 35px;
-  background-color: #0B0E15;
+  background-color: #0c111c;
 }
 
 .navbar__logo img {
@@ -653,11 +653,11 @@ input {
   background-color: #0d182b;
   border-radius: 20px;
   box-shadow: inset -3px -5px 3px #13243f;
-  height: 650px;
+  height: 780px;
   max-width: 400px;
 }
 .card-4 {
-  height: 750px !important;
+  height: 920px !important;
 }
 
 .bright1{
@@ -706,7 +706,7 @@ input {
   height: auto;
 }
 .card-description li {
-  font-size: 14px;
+  font-size: 16px;
   font-family: MezzardBold;
 }
 .card-description li::before{
@@ -716,7 +716,7 @@ input {
   display: inline-block; 
   width: 15px;
   margin-left: -1em;
-  font-size: 16px;
+  font-size: 18px;
 }
 .card-footer{
 }
@@ -732,7 +732,7 @@ input {
 }
 @media screen and (min-width: 880px) {
   .swiper {
-    height: 780px !important;
+    height: 960px !important;
   }
 }
 .card-footer .buy:hover {
@@ -768,6 +768,7 @@ input {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
+  margin-bottom: 13px;
 }
 .sponsor{
   height: 60px;
