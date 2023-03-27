@@ -99,7 +99,7 @@ body{
        padding-right: 100px;
      }
      .competition-image img{
-       width: 500px;
+       width: 680px;
      }
      
      .competition-title {
@@ -700,13 +700,13 @@ input {
   top: 5px;
 }
 .card-description{
-  padding: 25px;
+  padding: 15px 25px;
 
   list-style: none;
   height: auto;
 }
 .card-description li {
-  font-size: 14px;
+  font-size: 16px;
   font-family: MezzardBold;
 }
 .card-description li::before{
@@ -716,7 +716,7 @@ input {
   display: inline-block; 
   width: 15px;
   margin-left: -1em;
-  font-size: 15px;
+  font-size: 16px;
 }
 .card-footer{
 }
@@ -805,16 +805,13 @@ input {
   border: 4px solid #0065d9;
 }
 .video-course{
-  padding: 0 15px;
-  font-weight: 600;
   background: -webkit-linear-gradient(45deg,#81d7f6, #0028b9);
-  font-size: .8rem;
   text-align: center;
+  font-family: MezzardBold;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 .card:nth-child(1) .video-course{
-  box-shadow: inset -4px  4px  4px #142540;
   width: 85%;
   margin: auto;
   font-size: 1.5rem;

@@ -139,8 +139,8 @@ const PriceData = () => {
               {index !== 2 && <div className={index === 3 ? "video-course-four" : "video-course"}>{card?.info}</div>}
               
               <div className="card-footer">
-            <h4 className='discount'>{card.discount}</h4>
-              <p className="card-price">{card.price}</p>
+            <h4 className='discount mezzardBold'>{card.discount}</h4>
+              <p className="card-price mezzardBold">{card.price}</p>
               <div className={index !== 3 ? "buy" : "nthfour buy"}>
                 {index !==3 ? <p><a className="not4 mezzardBold" href="./">SOTIB OLISH</a></p>:<p><a className="fourulanish mezzardBold" href="./">ULANISH</a></p> }
                 {index ===3 ? <div className='mask'></div> : null}
