@@ -4,7 +4,7 @@ import Image from "next/image"
 const SocialLink = ({link,img}) => {
   return (
     <>
-      <a href={link}><Image src={img} alt="social" /></a>
+      <a target="_blank" href={link}><Image src={img} alt="social" /></a>
     </>
   )
 }

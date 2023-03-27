@@ -6,6 +6,7 @@ import InstagramIcon from '@/assets/images/social_insta.png'
 import TiktokIcon from '@/assets/images/social_tiktok.png'
 import YouTubeIcon from '@/assets/images/You-Tube.png'
 import Image from "next/image"
+import Link from "next/link"
 
 const Footer = () => {
 
@@ -15,16 +16,18 @@ const Footer = () => {
     <footer data-aos="fade-down" className="footer">
       <div className="footer-content">
         <div className="logo">
-          <Image src={Logo} alt="Logo" />
+          <Link href="/">
+            <Image src={Logo} alt="Logo" />
+          </Link>
           <p>© {date} ARASHOV. All rights reserved.</p>
         </div>
         <div className="social">
           <a href="#">Home</a>
           <a href="">Contact</a>
           <SocialLink link={"https://telegram.com"} img={TelegramIcon} />
-          <SocialLink link={"https://instagram.com"}  img={InstagramIcon} />
-          <SocialLink link={"https://tiktok.com"}  img={TiktokIcon} />
-          <SocialLink link={"https://youtube.com"}  img={YouTubeIcon} />
+          <SocialLink link={"https://www.instagram.com/arashov_trading_academy/"}  img={InstagramIcon} />
+          <SocialLink link={"https://www.tiktok.com/@arashov_trader"}  img={TiktokIcon} />
+          <SocialLink link={"https://www.youtube.com/@arashovTrader"}  img={YouTubeIcon} />
           
         </div>
       </div>

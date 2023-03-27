@@ -8,8 +8,9 @@ const Navbar = () => {
      <nav className="navbar">
       <div className="wrapper navbar">
         <div className="navbar__logo">
+          <Link href="/">
             <Image src={logo} alt="Logo" />
-          </div>
+          </Link>          </div>
           <div className="navbar__buttons">
             <Link href="/profile/login" className="login-button">LOG IN</Link>
             <Link href="/profile/register" style={{background: "#0135d3"}} className="register-button">REGISTER</Link>

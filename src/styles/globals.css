@@ -395,6 +395,9 @@ body{
   .competition-image img {
     width: 80%;
   }
+  .payment-crypto a {
+    font-size: 18px !important;
+  }
 }
 
 .site-top {
@@ -746,6 +749,8 @@ input {
   width: 100%;
   background-image: linear-gradient(to right, #003dff, #00a6ff);
   border-radius: 0px  0px  20px 20px ;
+  box-shadow: inset -4px  5px  4px #1679ea;
+  box-shadow: 1px 1px 10px #1679ea39, -1px -1px 10px #1679ea39;
   font-size: 1.3rem;
   color: #ffff;
   padding: 10px 0;
@@ -833,6 +838,9 @@ input {
   font-family: MezzardBold;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+box-shadow: inset -4px  4px  4px #142540;
+
+
 }
 .card:nth-child(1) .video-course{
   width: 85%;
@@ -846,7 +854,7 @@ input {
    background: -webkit-linear-gradient(45deg,#FEEB04, #f1d902) !important;
    font-size: .62rem !important;
    text-align: center;
- -webkit-background-clip: text;
+  -webkit-background-clip: text;
 }
 .discount{
   text-align: center;
@@ -859,6 +867,8 @@ input {
 .nthfour {
   background-image: linear-gradient(to bottom, #FCFE38, #DFAA01) !important;
   color: #000 !important;
+  box-shadow: inset -4px  5px  4px #d0ff00 !important;
+  box-shadow: 1px 1px 10px #d0ff004c, -1px -1px 10px #d0ff004c !important;
 }
 .bringht4 {
   background-color: #e8cd01 !important;
