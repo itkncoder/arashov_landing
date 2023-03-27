@@ -384,7 +384,7 @@ body{
   align-items: center;
   justify-content: center;
   padding: 0rem 100px;
-  background-color: #0c111c;
+  background-color: #000B1D;
 }
 
 @media screen and (max-width: 750px) {
@@ -395,7 +395,7 @@ body{
 }
 
 .site-top {
-  background-color: #0c111c;
+  background-color: #000B1D;
 }
 
 .main__left,
@@ -414,7 +414,7 @@ body{
 .main__left__header{
   min-width: 550px;
   margin-top: -320px;
-  background-color: #0c111c;
+  background-color: #000B1D;
 }
 .main__left__header h1 {
   font-weight: 900 !important;
@@ -592,7 +592,7 @@ input {
   align-items: center;
   width: 100%;
   padding: 35px 35px 75px 35px;
-  background-color: #0c111c;
+  background-color: #000B1D;
 }
 
 .navbar__logo img {
