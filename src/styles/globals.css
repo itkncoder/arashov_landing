@@ -22,6 +22,10 @@
   font-weight: bold !important;
 }
 
+.mezzard {
+  font-family: 'Mezzard';
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -732,7 +736,8 @@ input {
 }
 .card-description li {
   font-size: 16px;
-  font-family: MezzardBold;
+  font-family: 'Mazzard';
+  font-weight: 500;
 }
 .card-description li::before{
   content: "\2022";

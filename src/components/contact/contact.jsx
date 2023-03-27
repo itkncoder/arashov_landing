@@ -5,8 +5,10 @@ import ContacrImage from '@/assets/images/contact.png'
 import Image from "next/image"
 
 const Contact = () => {
+
   return (
-    <section className="contact">
+    <section className="contact cursor-pointer">
+
       <div data-aos="fade-up" className="contact-text">
         <h2 className="mezzardBold">SAVOLLAR BO’LSA MENEDJERGA MUROJAAT QILISHINGIZ MUMKIN</h2>
         <div className="telegram-contact">

@@ -2,6 +2,9 @@ import axios from "axios"
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
+import Image from "next/image"
+import Link from "next/link"
+import logo from "@/assets/images/logo.png"
 
 function App() {    
   const { register, handleSubmit } = useForm()
@@ -39,51 +42,56 @@ function App() {
     axios.post("https://arashovplatform.onrender.com/api/v1/auth/login/", obj).then(res => console.log(res))
   };
 
+  const inputDesign = "px-6 w-full py-2 rounded-md bg-gray-100 focus:ring-2 outline-0 ring-cyan-600 shadow"
+
+  const submitDesign = "my-4 bg-cyan-600 px-12 py-2 rounded-lg text-white hover:bg-cyan-700 cursor-pointer"
+
   return (
-    <div className="App h-screen bg-gray-200 flex justify-center items-center">
-      <div className="bg-gray-300 w-fit px-10 relative py-20 rounded-xl">
+    <div className="App h-screen bg-gradient-to-r from-cyan-700 to-blue-800 flex flex-col items-center justify-center">
+      <Link href="/">
+        <Image src={logo} className="w-40 absolute top-6 left-10" />
+      </Link>
+      <div className="bg-[#c8c8c8] w-[340px] h-5/6 px-6 relative pb-32 rounded-lg shadow-2xl">
+        <div>
+          <p className="uppercase text-gray-700 mezzardBold text-2xl text-center mt-20 mb-8">{loginOrRegister ? "Ro'yhatdan o'tish" : "Tizimga kirish"}</p>
+        </div>
         {loginOrRegister 
         ? 
         <>
           <form className="flex flex-col items-center" onSubmit={handleSubmit(onRegister)}>
-            <div>
+            <div className="w-full">
               <div className="flex flex-col items-center gap-2">
-                <input className="px-6 w-72 py-2 rounded-md focus:ring-2 outline-0 ring-cyan-600" type="email" {...register("email")} name="email" placeholder="Email" />
-                <input className="px-6 w-72 py-2 rounded-md focus:ring-2 outline-0 ring-cyan-600" type="tel" {...register("phone")} name="phone" placeholder="Phone" />
-                <input className="px-6 w-72 py-2 rounded-md focus:ring-2 outline-0 ring-cyan-600" type="password" {...register("password")} name="password" placeholder="Password" />
+                <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                <input className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
+                <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
               </div>
 
               <div className="flex justify-end items-center">
-                <input className="my-4 bg-cyan-600 px-8 py-2 rounded-lg text-white hover:bg-cyan-700 cursor-pointer" type="submit" value="Jo'natish" />
+                <input className={submitDesign} type="submit" value="Jo'natish" />
               </div>
 
-            </div>
-
-            <div className="absolute bottom-3 left-6 cursor-pointer text-gray-700" onClick={() => setLoginOrRegister(prev => !prev)}>
-              {loginOrRegister ? "login" : "register"}
             </div>
           </form>
         </>
         :
         <>
           <form className="flex flex-col items-center" onSubmit={handleSubmit(onLogin)}>
-            <div>
+            <div className="w-full">
               <div className="flex flex-col items-center gap-2">
-                <input className="px-6 w-72 py-2 rounded-md focus:ring-2 outline-0 ring-cyan-600" type="email" {...register("email")} name="email" placeholder="Email" />
-                <input className="px-6 w-72 py-2 rounded-md focus:ring-2 outline-0 ring-cyan-600" type="password" {...register("password")} name="password" placeholder="Password" />
+                <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
               </div>
 
               <div className="flex justify-end items-center">
-                <input className="my-4 bg-cyan-600 px-8 py-2 rounded-lg text-white hover:bg-cyan-700 cursor-pointer" type="submit" value="Kirish" />
+                <input className={submitDesign} type="submit" value="Kirish" />
               </div>
 
             </div>
-
-            <div className="absolute bottom-3 left-6 cursor-pointer text-gray-700" onClick={() => setLoginOrRegister(prev => !prev)}>
-              {loginOrRegister ? "login" : "register"}
-            </div>
           </form>
         </>}
+        <div className="absolute bottom-3 left-6 cursor-pointer text-sm text-gray-200 bg-cyan-600 px-6 rounded-xl py-0.5 hover:bg-cyan-700 mezzardBold" onClick={() => setLoginOrRegister(prev => !prev)}>
+          {loginOrRegister ? "Tizimga kirish" : "Ro'yhatdan o'tish"}
+        </div>
       </div>
     </div>
   )
