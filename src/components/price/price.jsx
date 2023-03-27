@@ -13,11 +13,11 @@ const Price = () => {
     <section className="Price-section"> 
       <PriceData />
       <div className="sponsor">
-          <Image src={Binance} alt="Binance" />
-          <Image src={Payme} alt="Payme" />
-          <Image src={Tether} alt="Tether" />
-          <Image src={Humo} alt="Humo" />
-          <Image src={Uzcard} alt="Uzcard" />
+          <Image className="bigtel" src={Binance} alt="Binance" />
+          <Image className="bigtel" src={Payme} alt="Payme" />
+          <Image className="bigtel" src={Tether} alt="Tether" />
+          <Image className="nonetel" src={Humo} alt="Humo" />
+          <Image className="nonetel" src={Uzcard} alt="Uzcard" />
      </div>
      <div className="payment-crypto">
       <Link href="./" className="mezzardBold">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>

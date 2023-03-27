@@ -254,7 +254,8 @@ body{
       }
       .telegram-contact a {
            margin: auto;
- 
+        justify-content: start;
+        gap: 20px;
       }
       .contact::before,
       .contact::after{
@@ -362,6 +363,12 @@ body{
   .social img {
    width: 20px;
  }
+ .nonetel {
+  display: none;
+ }
+ .bigtel {
+  width: 75px !important;
+ }
 }
 
 .swiper {
@@ -377,6 +384,17 @@ body{
   align-items: center;
   justify-content: center;
   padding: 0rem 100px;
+  background-color: #0c111c;
+}
+
+@media screen and (max-width: 750px) {
+  .main__left {
+    order: 1 !important;
+    margin: 55px 0;
+  }
+}
+
+.site-top {
   background-color: #0c111c;
 }
 
@@ -396,6 +414,7 @@ body{
 .main__left__header{
   min-width: 550px;
   margin-top: -320px;
+  background-color: #0c111c;
 }
 .main__left__header h1 {
   font-weight: 900 !important;

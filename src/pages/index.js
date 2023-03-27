@@ -20,8 +20,10 @@ function Home() {
                 <link rel="shortcut icon" href="../assets/images/Logo.png" type="image/x-icon" />
             </Head>
             <main>
-                <Navbar />
-                <Main />
+                <div className="site-top">
+                    <Navbar />
+                    <Main />
+                </div>
                 <Usefull />
                 <TraderInfo />
                 <Competition />
