@@ -12,7 +12,7 @@ const Competition = () => {
                               <Image data-aos="fade-left" src={Car} alt="car" />
                          </div>
                          <div data-aos="fade-right" className="competition-text">
-                              <p className="competition-description">
+                              <p className="competition-description mezzardBold">
                                    ONLINE VA OFFLINE KURSIMIZNI TO’LIQ O’TGAN HAR BIR KISHI AVTOMATIK RAVISHDA
                                    <span className="mezzardBold" style={{ color: "#42a7ff" }}> COBALT</span> AVTOMOBILINI  O'YININING ISHTIROKCHISIGA  AYLANADI.
                               </p>

@@ -392,6 +392,9 @@ body{
     order: 1 !important;
     margin: 55px 0;
   }
+  .competition-image img {
+    width: 80%;
+  }
 }
 
 .site-top {
