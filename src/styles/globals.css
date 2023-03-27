@@ -743,14 +743,12 @@ input {
   margin-left: -1em;
   font-size: 18px;
 }
-.card-footer{
-}
 .card-footer .buy{
   width: 100%;
   background-image: linear-gradient(to right, #003dff, #00a6ff);
   border-radius: 0px  0px  20px 20px ;
   box-shadow: inset -4px  5px  4px #1679ea;
-  box-shadow: 1px 1px 10px #1679ea39, -1px -1px 10px #1679ea39;
+  box-shadow: 1px 1px 13px #1679ea5c, -1px -1px 13px #1679ea5c;
   font-size: 1.3rem;
   color: #ffff;
   padding: 10px 0;

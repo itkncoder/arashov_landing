@@ -19,7 +19,7 @@ const Footer = () => {
           <Link href="/">
             <Image src={Logo} alt="Logo" />
           </Link>
-          <p>© {date} ARASHOV. All rights reserved.</p>
+          <p>© {date} <Link href="/">ARASHOV</Link>. All rights reserved.</p>
         </div>
         <div className="social">
           <a href="#">Home</a>
