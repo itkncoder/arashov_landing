@@ -42,18 +42,18 @@ function App() {
     axios.post("https://arashovplatform.onrender.com/api/v1/auth/login/", obj).then(res => console.log(res))
   };
 
-  const inputDesign = "px-6 w-full py-2 rounded-md bg-gray-100 focus:ring-2 outline-0 ring-cyan-600 shadow"
+  const inputDesign = "px-6 w-full py-2 rounded-md bg-gray-100 focus:ring-2 outline-0 ring-cyan-700 shadow"
 
-  const submitDesign = "my-4 bg-cyan-600 px-12 py-2 rounded-lg text-white hover:bg-cyan-700 cursor-pointer"
+  const submitDesign = "my-4 bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-2 rounded-lg text-white hover:to-blue-600 hover:from-cyan-600 transition-all duration-300 hover:shadow cursor-pointer"
 
   return (
     <div className="App h-screen bg-gradient-to-r from-cyan-700 to-blue-800 flex flex-col items-center justify-center">
-      <Link href="/">
-        <Image src={logo} className="w-40 absolute top-6 left-10" />
-      </Link>
-      <div className="bg-[#c8c8c8] w-[340px] h-5/6 px-6 relative pb-32 rounded-lg shadow-2xl">
-        <div>
-          <p className="uppercase text-gray-700 mezzardBold text-2xl text-center mt-20 mb-8">{loginOrRegister ? "Ro'yhatdan o'tish" : "Tizimga kirish"}</p>
+      <div className="bg-[#c8c8c8] w-full max-w-sm 2xl:max-w-md h-5/6 px-6 relative pb-32 rounded-lg shadow-2xl">
+        <div className="flex flex-col items-center mt-10 gap-5">
+          <Link href="/">
+            <Image src={logo} className="w-40" />
+          </Link>
+          <p className="uppercase text-gray-700 mezzardBold text-2xl text-center mb-8">{loginOrRegister ? "Ro'yhatdan o'tish" : "Tizimga kirish"}</p>
         </div>
         {loginOrRegister 
         ? 
