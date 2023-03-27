@@ -14,7 +14,7 @@ const Competition = () => {
                          <div data-aos="fade-right" className="competition-text">
                               <p className="competition-description">
                                    ONLINE VA OFFLINE KURSIMIZNI TO’LIQ O’TGAN HAR BIR KISHI AVTOMATIK RAVISHDA
-                                   <span style={{ color: "#42a7ff" }}> COBALT</span> AVTOMOBILINI  O'YININING ISHTIROKCHISIGA  AYLANADI.
+                                   <span className="mezzardBold" style={{ color: "#42a7ff" }}> COBALT</span> AVTOMOBILINI  O'YININING ISHTIROKCHISIGA  AYLANADI.
                               </p>
                               <p className="note">*PREMIUM VIDEODARSLIKLARNI XARID QILGANLAR ISHTIROK ETMAYDI</p>
                          </div>

@@ -694,7 +694,7 @@ input {
   font-size: 26px;
 }
 .corona {
-  width: 36px;
+  width: 40px;
   height: auto;
   position: absolute;
   top: 5px;
@@ -707,19 +707,16 @@ input {
 }
 .card-description li {
   font-size: 14px;
+  font-family: MezzardBold;
 }
 .card-description li::before{
-  font-weight: 500;
-
-  /* line-height: 25px; */
-
   content: "\2022";
   color: #0078fa;
   font-weight: bold;
   display: inline-block; 
-  width: 17px;
+  width: 15px;
   margin-left: -1em;
-  font-size: 12px;
+  font-size: 15px;
 }
 .card-footer{
 }
@@ -854,6 +851,7 @@ input {
   padding: 0 15px;
   background: -webkit-linear-gradient(45deg,#f1d902, #f1d902);
   color: #f1d9027b;
+  font-family: MezzardBold;
   font-size: .8rem !important;
   text-align: center;
   -webkit-background-clip: text !important;
