@@ -30,7 +30,9 @@ const Add = () => {
             if (type === "studentsedit") {
                 axios.patch(`https://arashovplatform.onrender.com/api/v1/admin/students/${id}`, payment).then(router.push("/admin/arashov/dashboard"))
             } else {
-                axios.patch(`https://arashovplatform.onrender.com/api/v1/admin/courses/${id}`, obj).then(router.push("/admin/arashov/dashboard"))
+                axios.patch(`https://arashovplatform.onrender.com/api/v1/admin/courses/${id}`, obj).then(router.push("/admin/arashov/dashboard")).then(() => {
+                    axios.get(`https://arashovplatform.onrender.com/api/v1/admin/courses/${id}`).then(res => setInputs(res.data.data))
+                })
             }
         } else {
             axios.post("https://arashovplatform.onrender.com/api/v1/admin/courses/add", obj).then(router.push("/admin/arashov/dashboard"))
