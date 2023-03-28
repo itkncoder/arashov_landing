@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Image from "next/image"
+import Head from "next/head"
 import Link from "next/link"
 import logo from "@/assets/images/Logo.png"
 import loginImg from "@/assets/images/login.png"
@@ -43,12 +44,15 @@ function App() {
     axios.post("https://arashovplatform.onrender.com/api/v1/auth/login/", obj).then(res => console.log(res))
   };
 
-  const inputDesign = "px-6 w-full py-2 bg-[#000C2C] text-gray-100 outline-0 rounded-xl"
+  const inputDesign = "px-6 ml-1 w-full py-2 bg-[#000C2C] text-gray-100 outline-0 rounded-r-xl"
 
   const submitDesign = "mt-6 bg-gradient-to-r from-[#001B9B] to-[#0064F2] px-12 py-2 rounded-xl w-full text-xl text-white hover:-translate-y-0.5 transition-all duration-300 hover:shadow minishadow cursor-pointer"
 
   return (
     <div className="App h-screen bg-gradient-to-r from-[#001437] to-[#000217] flex items-center justify-center">
+      <Head>
+        <title>Arashov - {loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"}</title>
+      </Head>
       <div className="flex-1 boxshadowed2 max-w-2xl h-[520px] py-4 px-32 relative pb-32 shadow-xl border-4 border-[#002C72] rounded-2xl">
         <div className="flex flex-col items-start mt-14 gap-1 mb-6">
           <p className="uppercase text-gray-200 text-2xl mezzardBold text-center">Kurslardan birini xarid qilish uchun {loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"}</p>
@@ -61,15 +65,15 @@ function App() {
               <div className="flex flex-col items-center gap-5">
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                   <i className="fa-solid fa-envelope text-xl"></i>
-                  <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                  <input autocomplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
                 </div>
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                   <i className="fa-solid fa-key"></i>
-                  <input className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
+                  <input autocomplete="off" className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
                 </div>
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                   <i className="fa-solid fa-phone"></i>
-                  <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
+                  <input autocomplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
                 </div>
               </div>
 
@@ -87,11 +91,11 @@ function App() {
               <div className="flex flex-col items-center gap-5">
               <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                 <i className="fa-solid fa-envelope text-xl"></i>
-                <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                <input autocomplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
               </div>                
               <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                 <i className="fa-solid fa-phone"></i>
-                <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
+                <input autocomplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
               </div>
               </div>
 
