@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import Image from "next/image"
 import Link from "next/link"
 import logo from "@/assets/images/Logo.png"
+import loginImg from "@/assets/images/login.png"
 
 function App() {    
   const { register, handleSubmit } = useForm()
@@ -42,32 +43,38 @@ function App() {
     axios.post("https://arashovplatform.onrender.com/api/v1/auth/login/", obj).then(res => console.log(res))
   };
 
-  const inputDesign = "px-6 w-full py-2 rounded-md bg-gray-100 focus:ring-2 outline-0 ring-cyan-700 shadow"
+  const inputDesign = "px-6 w-full py-2 bg-[#000C2C] text-gray-100 outline-0 rounded-xl"
 
-  const submitDesign = "my-4 bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-2 rounded-lg text-white hover:to-blue-600 hover:from-cyan-600 transition-all duration-300 hover:shadow cursor-pointer"
+  const submitDesign = "mt-6 bg-gradient-to-r from-[#001B9B] to-[#0064F2] px-12 py-2 rounded-xl w-full text-xl text-white hover:-translate-y-0.5 transition-all duration-300 hover:shadow minishadow cursor-pointer"
 
   return (
-    <div className="App h-screen bg-gradient-to-r from-cyan-700 to-blue-800 flex flex-col items-center justify-center">
-      <div className="bg-[#c8c8c8] w-full max-w-sm 2xl:max-w-md h-5/6 px-6 relative pb-32 rounded-lg shadow-2xl">
-        <div className="flex flex-col items-center mt-10 gap-5">
-          <Link href="/">
-            <Image src={logo} className="w-40" />
-          </Link>
-          <p className="uppercase text-gray-700 mezzardBold text-2xl text-center mb-8">{loginOrRegister ? "Ro'yhatdan o'tish" : "Tizimga kirish"}</p>
+    <div className="App h-screen bg-gradient-to-r from-[#001437] to-[#000217] flex items-center justify-center">
+      <div className="flex-1 boxshadowed2 max-w-2xl h-[520px] py-4 px-32 relative pb-32 shadow-xl border-4 border-[#002C72] rounded-2xl">
+        <div className="flex flex-col items-start mt-14 gap-1 mb-6">
+          <p className="uppercase text-gray-200 text-2xl mezzardBold text-center">Kurslardan birini xarid qilish uchun {loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"}</p>
         </div>
         {loginOrRegister 
         ? 
         <>
           <form className="flex flex-col items-center" onSubmit={handleSubmit(onRegister)}>
             <div className="w-full">
-              <div className="flex flex-col items-center gap-2">
-                <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
-                <input className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
-                <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
+              <div className="flex flex-col items-center gap-5">
+                <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
+                  <i className="fa-solid fa-envelope text-xl"></i>
+                  <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                </div>
+                <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
+                  <i className="fa-solid fa-key"></i>
+                  <input className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
+                </div>
+                <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
+                  <i className="fa-solid fa-phone"></i>
+                  <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
+                </div>
               </div>
 
-              <div className="flex justify-end items-center">
-                <input className={submitDesign} type="submit" value="Jo'natish" />
+              <div className="flex justify-start items-center">
+                <input className={submitDesign} type="submit" value={loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"} />
               </div>
 
             </div>
@@ -77,20 +84,26 @@ function App() {
         <>
           <form className="flex flex-col items-center" onSubmit={handleSubmit(onLogin)}>
             <div className="w-full">
-              <div className="flex flex-col items-center gap-2">
+              <div className="flex flex-col items-center gap-5">
+              <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
+                <i className="fa-solid fa-envelope text-xl"></i>
                 <input className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+              </div>                
+              <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
+                <i className="fa-solid fa-phone"></i>
                 <input className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
               </div>
+              </div>
 
-              <div className="flex justify-end items-center">
-                <input className={submitDesign} type="submit" value="Kirish" />
+              <div className="flex justify-start items-center">
+                <input className={submitDesign} type="submit" value={loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"} />
               </div>
 
             </div>
           </form>
         </>}
-        <div className="absolute bottom-3 left-6 cursor-pointer text-sm text-gray-200 bg-cyan-600 px-6 rounded-xl py-0.5 hover:bg-cyan-700 mezzardBold" onClick={() => setLoginOrRegister(prev => !prev)}>
-          {loginOrRegister ? "Tizimga kirish" : "Ro'yhatdan o'tish"}
+        <div className="flex justify-end my-2 items-center text-sm text-gray-200 px-4 rounded-md py-0.5 mezzardBold">
+          <p className="cursor-pointer hover:underline" onClick={() => setLoginOrRegister(prev => !prev)}>{loginOrRegister ? "Tizimga kirish" : "Ro'yhatdan o'tish"}</p>
         </div>
       </div>
     </div>

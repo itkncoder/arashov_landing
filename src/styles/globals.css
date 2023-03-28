@@ -51,7 +51,14 @@ body{
 .home__btn{
   background: #0135d3;
   box-shadow: inset -4px -4px 4px hsla(239, 94%, 75%, 0.3), inset 1px 4px 5px hsla(239, 100%, 78%, 0.3);
-  
+}
+
+.boxshadowed {
+  box-shadow: inset -4px -4px 4px hsla(239, 94%, 75%, 0.3), inset 1px 4px 5px hsla(239, 100%, 78%, 0.3);
+}
+
+.boxshadowed2 {
+  box-shadow: inset -15px -15px 50px #002C72, inset 15px 15px 50px #002C72, 20px 20px 75px #0000004a, -20px -20px 75px #0000004a;
 }
 
 *::-webkit-scrollbar {
@@ -747,6 +754,9 @@ input {
   width: 15px;
   margin-left: -1em;
   font-size: 18px;
+}
+.minishadow {
+  box-shadow: 1px 1px 13px #1679ea2f, -1px -1px 13px #1679ea2f;
 }
 .card-footer .buy{
   width: 100%;
