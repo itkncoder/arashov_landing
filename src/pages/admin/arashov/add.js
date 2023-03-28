@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form";
 import Link from "next/link"
 import { useRouter } from "next/router"
+import Head from "next/head"
 
 const Add = () => {
     const { register, handleSubmit } = useForm();
@@ -55,7 +56,11 @@ const Add = () => {
         
         <div className="absolute w-full min-h-full bg-[#151A20] z-50 top-0 right-0 flex items-start justify-center">
 
-            <aside className="px-6 h-full w-fit md:w-60 flex flex-col items-center py-6 absolute md:static top-0 left-2 md:bg-gray-800">
+            <Head>
+                <title>Arashov - {postOrPut ? "POST" : "PUT"} {type === "studentsedit" ? "STUDENTS" : 'COURSES'}</title>
+            </Head>
+
+            <aside className="px-6 h-full w-fit md:w-60 flex flex-col items-center py-6 absolute md:static md:h-screen top-0 left-0 md:bg-gray-800">
                 <div className="flex flex-col items-start gap-2 w-full">
 
                     <Link className="my-6 rounded-lg bg-yellow-500 px-8 hover:bg-yellow-600 py-2" href="/admin/arashov/dashboard">Ortga</Link>
@@ -65,7 +70,7 @@ const Add = () => {
 
             <div className="w-full">
                 <div className="mx-auto mt-32 md:mt-6 px-10 flex items-center justify-start">
-                    <h1 className="text-4xl font-semibold uppercase">{!type && "ADD COURSE"}{type === "studentsedit" ? "STUDENT" : ''}</h1>
+                    <h1 className="text-4xl font-semibold uppercase">{!type && "ADD COURSE"}{type === "studentsedit" ? "STUDENTS" : ''}</h1>
                     <p className="ml-4 text-lg font-semibold">-{postOrPut ? "POST" : "PUT"}-</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">

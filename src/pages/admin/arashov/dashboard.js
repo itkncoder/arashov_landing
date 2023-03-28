@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import axios from "axios";
+import Head from "next/head"
 
 const Dashboard = () => {
 
@@ -30,6 +31,9 @@ const Dashboard = () => {
 
     return (  
         <div className="mx-auto absolute top-0 right-0 z-50 w-full h-full flex flex-col md:flex-row items-center md:items-start justify-start h-screen md:max-h-screen">
+        <Head>
+            <title>Arashov - Dashboard</title>
+        </Head>
             <aside className="px-6 w-full h-full md:w-72 flex flex-col items-center py-6 bg-gray-800">
                 <Link href="/">
                     <Image src={logo} alt="logo" className="w-40 cursor-pointer hover:-rotate-2 transition-all" />
