@@ -49,13 +49,13 @@ function App() {
   const submitDesign = "mt-6 bg-gradient-to-r from-[#001B9B] to-[#0064F2] px-12 py-2 rounded-xl w-full text-xl text-white hover:-translate-y-0.5 transition-all duration-300 hover:shadow minishadow cursor-pointer"
 
   return (
-    <div className="App h-screen bg-gradient-to-r from-[#001437] to-[#000217] flex items-center justify-center">
+    <div className="App px-2 h-screen bg-gradient-to-r from-[#001437] to-[#000217] flex items-center justify-center">
       <Head>
         <title>Arashov - {loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"}</title>
       </Head>
-      <div className="flex-1 boxshadowed2 max-w-2xl h-[520px] py-4 px-32 relative pb-32 shadow-xl border-4 border-[#002C72] rounded-2xl">
+      <div className="flex-1 boxshadowed2 max-w-2xl h-[520px] py-4 px-10 sm:px-32 relative pb-32 shadow-xl border-4 border-[#002C72] rounded-2xl">
         <div className="flex flex-col items-start mt-14 gap-1 mb-6">
-          <p className="uppercase text-gray-200 text-2xl mezzardBold text-center">Kurslardan birini xarid qilish uchun {loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"}</p>
+          <p className="uppercase text-gray-200 text-basic sm:text-2xl mezzardBold text-center">Kurslardan birini xarid qilish uchun {loginOrRegister ? "Ro'yhatdan o'ting" : "Tizimga kiring"}</p>
         </div>
         {loginOrRegister 
         ? 
