@@ -39,6 +39,11 @@
   margin: 0 auto;
   width: fit-content;
 }
+@media screen and (max-width: 550px) {
+  .wrapper {
+    max-width: none !important;
+  }
+}
 img {
   width: fit-content;
   height: fit-content;
@@ -46,6 +51,7 @@ img {
 body{
   background-color: #000b1d;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .home__btn{
@@ -934,7 +940,7 @@ box-shadow: inset -4px  4px  4px #142540;
     margin-top: 10px;
   }
   .sponsor{
-    width: 300px;
+    max-width: 300px;
 
     margin: auto;
   }
