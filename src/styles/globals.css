@@ -35,6 +35,7 @@
   font-weight: 400;
 }
 .wrapper {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   width: fit-content;
@@ -51,6 +52,7 @@ img {
 body{
   background-color: #000b1d;
   color: #fff;
+  width: 100%;
   overflow-x: hidden;
 }
 
