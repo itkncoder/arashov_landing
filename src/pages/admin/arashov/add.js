@@ -91,11 +91,21 @@ const Add = () => {
                                 </div></>
                                 :
                                 <div className="w-full my-3 gap-6 py-3 rounded-2xl">
-                                    <h1 className="text-xl">Payment</h1>
-                                    <select value={payment.payment} onChange={e => setPayment({...payment, payment: e.target.value})} name="payment" id="" className="px-8 py-2 bg-gray-700 text-gray-200 rounded-md w-full outline-none">
-                                        <option value="true">True</option>
-                                        <option value="false">False</option>
-                                    </select>
+                                    <div className="my-5">
+                                        <h1 className="text-xl">Payment</h1>
+                                        <select value={payment.payment} onChange={e => setPayment({...payment, payment: e.target.value})} name="payment" id="" className="px-8 py-2 bg-gray-700 text-gray-200 rounded-md w-full outline-none">
+                                            <option value="true">True</option>
+                                            <option value="false">False</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <h1 className="text-xl">PaymentType</h1>
+                                        <select value={payment.paymentType} onChange={e => setPayment({...payment, paymentType: e.target.value})} name="payment" id="" className="px-8 py-2 bg-gray-700 text-gray-200 rounded-md w-full outline-none">
+                                            <option value="Payme">Payme</option>
+                                            <option value="Crypto">Crypto</option>
+                                            <option value="Menejer">Menejer</option>
+                                        </select>
+                                    </div>
                                 </div>
                             }
 
