@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from "react"
 import Layout from "@/layout/layout"
 
-function Home() {
+function Index() {
 
     useEffect(() => {
         AOS.init();
@@ -35,4 +35,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Index;

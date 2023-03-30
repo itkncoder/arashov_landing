@@ -32,7 +32,7 @@ function App() {
       password: data.password
     }
 
-    axios.post("https://arashovplatform.onrender.com/api/v1/auth/register/", obj).then(res => alert("auth"))
+    axios.post("https://arashovplatform.onrender.com/api/v1/auth/register", obj).then(res => router.push("/profile/login"))
   };
 
   const onLogin = async (data) => {
@@ -41,7 +41,10 @@ function App() {
       password: data.password
     }
 
-    axios.post("https://arashovplatform.onrender.com/api/v1/auth/login/", obj).then(res => console.log(res))
+    axios.post("https://arashovplatform.onrender.com/api/v1/auth/login", obj).then(res => {
+      localStorage.setItem('token', res.data.token)
+      router.push("/profile/me")
+    })
   };
 
   const inputDesign = "px-6 ml-1 w-full py-2 bg-[#000C2C] text-gray-100 outline-0 rounded-r-xl"
@@ -65,15 +68,15 @@ function App() {
               <div className="flex flex-col items-center gap-5">
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                   <i className="fa-solid fa-envelope text-xl"></i>
-                  <input autocomplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                  <input autoComplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
                 </div>
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                   <i className="fa-solid fa-key"></i>
-                  <input autocomplete="off" className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
+                  <input autoComplete="off" className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
                 </div>
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                   <i className="fa-solid fa-phone"></i>
-                  <input autocomplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
+                  <input autoComplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
                 </div>
               </div>
 
@@ -91,11 +94,11 @@ function App() {
               <div className="flex flex-col items-center gap-5">
               <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                 <i className="fa-solid fa-envelope text-xl"></i>
-                <input autocomplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
+                <input autoComplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
               </div>                
               <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
                 <i className="fa-solid fa-phone"></i>
-                <input autocomplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
+                <input autoComplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
               </div>
               </div>
 

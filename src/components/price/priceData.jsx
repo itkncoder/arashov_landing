@@ -4,6 +4,7 @@ import 'swiper/css';
 import { Autoplay } from "swiper";
 import corona from "@/assets/images/corona.png"
 import Image from "next/image"
+import Link from "next/link"
 
 const cardData = [
      {
@@ -19,7 +20,9 @@ const cardData = [
          "Riskni boshqarish (Risk menejement)",
          "Trading (Texnik analiz)",
          "Kurator bilan savol javob "
-       ]
+       ],
+       button: "SOTIB OLISH",
+       link: "/profile/register"
      },
      {
        title: "ONLINE",
@@ -35,7 +38,9 @@ const cardData = [
          "Trading (Texnik va fundamental analiz)",
          "O’zim foydalanadigan strategiyalar",
          "O’quvchilar orasida Chat guruh"
-       ]
+       ],
+       button: "ULANISH",
+       link: "https:t.me/arashov"
      },
      {
        title: "OFFLINE",
@@ -55,7 +60,9 @@ const cardData = [
          "Ofisga kelib o’rganish imkoniyati",
          "Traderlar bilan fikr almashish ",
          "Dars jarayonida real hisobda savdo qilishni o’rganish",
-       ]
+       ],
+       button: "ULANISH",
+       link: "https:t.me/arashov"
      },
      {
        title: "VIP",
@@ -77,7 +84,9 @@ const cardData = [
          "Dars jarayonida real hisobda savdo qilishni o’rganish",
          "DICO, IDO, P2P arbitraj",
          "Shaxsan o’zim bilan savdo qilasiz",
-       ]
+       ],
+       button: "ULANISH",
+       link: "https:t.me/arashov"
      },
      
    ];
@@ -142,7 +151,7 @@ const PriceData = () => {
               <h4 className='discount mezzardBold'>{card.discount}</h4>
               <p className="card-price mezzardBold">{card.price}</p>
               <div className={index !== 3 ? "buy" : "nthfour buy"}>
-                {index !==3 ? <p><a className="not4 mezzardBold" href="./">SOTIB OLISH</a></p>:<p><a className="fourulanish mezzardBold" href="./">ULANISH</a></p> }
+                {index !==3 ? <p><Link className="not4 mezzardBold" href={card?.link}>{card?.button}</Link></p>:<p><a className="fourulanish mezzardBold" href="./">{card?.button}</a></p> }
                 {index ===3 ? <div className='mask'></div> : null}
               </div>
               

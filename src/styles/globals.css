@@ -69,6 +69,10 @@ body{
   box-shadow: inset -15px -15px 50px #002C72, inset 15px 15px 50px #002C72, 20px 20px 75px #0000004a, -20px -20px 75px #0000004a;
 }
 
+.boxshadowed3 {
+  box-shadow: inset -10px -10px 30px #002C72, inset 10px 10px 30px #002C72, 20px 20px 75px #0000004a, -20px -20px 75px #0000004a;
+}
+
 *::-webkit-scrollbar {
   width: 10px;
 }
