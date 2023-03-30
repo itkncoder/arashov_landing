@@ -9,11 +9,24 @@ import { useState } from "react"
 const Me = () => {
 
     const [dropdown, setDropdown] = useState(false)
+    const [dropdownNow, setDropdownNow] = useState(1)
+
+    const arr = [
+        {
+            num: 34545
+        },
+        {
+            num: 34543
+        },
+        {
+            num: 34542
+        },
+    ]
 
     return (  
         <div onClick={(e) => {
             if (!e.target.classList.contains("drowdown-item")) {
-                setDropdown(false)
+                setDropdownNow(false)
             }
         }} className="max-w-screen-xl mx-auto">
             <header className="flex justify-between items-center py-8">
@@ -44,8 +57,9 @@ const Me = () => {
                     </div>
                 </div>
                 <div className="mt-8">
-                    <Accordion setDropdown={setDropdown} dropdown={dropdown} />
-                    <Accordion setDropdown={setDropdown} dropdown={dropdown} />
+                    {arr.map(function(item, index) {
+                        return <Accordion indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} />
+                    })}
                 </div>
             </main>
         </div>
