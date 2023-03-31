@@ -19,7 +19,7 @@ const Me = () => {
             headers: {
                 token: localStorage.getItem('token')
             }
-        }).then(res => console.log(res.data.data))
+        }).then(res => setDataUser(res.data.data))
     }, [])
 
     const arr = [
@@ -68,11 +68,14 @@ const Me = () => {
                     </div>
                 </div>
                 <div className="mt-8">
-                    <div>
+                    <div className="flex justify-between items-center">
                         <h1 className="mezzardBold text-2xl">KURSLAR:</h1>
+                        <div>
+                            {!dataUser?.payment && <Link className="mezzardBold py-2 px-6 rounded-lg bg-blue-700 py-1 hover:bg-blue-800" href="/checkout">To'lov qilish</Link>}
+                        </div>
                     </div>
                     {arr.map(function(item, index) {
-                        return <Accordion indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} />
+                        return <Accordion isPayed={dataUser?.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} />
                     })}
                 </div>
             </main>
