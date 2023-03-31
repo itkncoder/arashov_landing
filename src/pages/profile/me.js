@@ -9,7 +9,7 @@ import { useState } from "react"
 const Me = () => {
 
     const [dropdown, setDropdown] = useState(false)
-    const [dropdownNow, setDropdownNow] = useState(1)
+    const [dropdownNow, setDropdownNow] = useState('')
 
     const arr = [
         {

@@ -15,6 +15,7 @@ function App() {
   const { type } = router.query
 
   const [loginOrRegister, setLoginOrRegister] = useState('')
+  const [status, setStatus] = useState('')
 
   useEffect(() => {
     if (type == "register") {
@@ -42,8 +43,12 @@ function App() {
     }
 
     axios.post("https://arashovplatform.onrender.com/api/v1/auth/login", obj).then(res => {
-      localStorage.setItem('token', res.data.token)
-      router.push("/profile/me")
+      if (res.data.token) {
+        localStorage.setItem('token', res.data.token)
+        router.push("/profile/me")
+      } else {
+        setStatus("Xatolik, bunday foydalanuvchi mavjud emas")
+      }
     })
   };
 
@@ -90,6 +95,7 @@ function App() {
         :
         <>
           <form className="flex flex-col items-center" onSubmit={handleSubmit(onLogin)}>
+            <p className="text-rose-500 text-lg mb-2 mezzardBold">{status}</p>
             <div className="w-full">
               <div className="flex flex-col items-center gap-5">
               <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">

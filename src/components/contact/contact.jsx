@@ -7,7 +7,7 @@ import Image from "next/image"
 const Contact = () => {
 
   return (
-    <section className="contact cursor-pointer">
+    <section className="contact">
 
       <div data-aos="fade-up" className="contact-text">
         <h2 className="mezzardBold">SAVOLLAR BO’LSA MENEDJERGA MUROJAAT QILISHINGIZ MUMKIN</h2>
