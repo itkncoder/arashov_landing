@@ -57,6 +57,9 @@ const Me = () => {
                     </div>
                 </div>
                 <div className="mt-8">
+                    <div>
+                        <h1 className="mezzardBold text-2xl">KURSLAR:</h1>
+                    </div>
                     {arr.map(function(item, index) {
                         return <Accordion indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} />
                     })}

@@ -27,29 +27,36 @@ function App() {
   }, [router])
 
   const onRegister = async (data) => {
-    const obj = {
-      email: data.email,
-      phone: data.phone,
-      password: data.password
+    if (data.email.length && data.phone.length && data.password.length) {
+      const obj = {
+        email: data.email,
+        phone: data.phone,
+        password: data.password
+      }
+  
+      axios.post("https://arashovplatform.onrender.com/api/v1/auth/register", obj).then(res => router.push("/profile/login"))
     }
-
-    axios.post("https://arashovplatform.onrender.com/api/v1/auth/register", obj).then(res => router.push("/profile/login"))
   };
 
   const onLogin = async (data) => {
-    const obj = {
-      email: data.email,
-      password: data.password
-    }
-
-    axios.post("https://arashovplatform.onrender.com/api/v1/auth/login", obj).then(res => {
-      if (res.data.token) {
-        localStorage.setItem('token', res.data.token)
-        router.push("/profile/me")
-      } else {
-        setStatus("Xatolik, bunday foydalanuvchi mavjud emas")
+    if (data.email.length && data.password.length) {
+      const obj = {
+        email: data.email,
+        password: data.password
       }
-    })
+  
+      axios.post("https://arashovplatform.onrender.com/api/v1/auth/login", obj).then(res => {
+        if (res.data.token) {
+          localStorage.setItem('token', res.data.token)
+          router.push("/profile/me")
+        } else {
+          setStatus("Xatolik, bunday foydalanuvchi mavjud emas")
+          setTimeout(() => {
+            setStatus("")
+          }, 5000)
+        }
+      })
+    }
   };
 
   const inputDesign = "px-6 ml-1 w-full py-2 bg-[#000C2C] text-gray-100 outline-0 rounded-r-xl"
@@ -76,11 +83,11 @@ function App() {
                   <input autoComplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
                 </div>
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
-                  <i className="fa-solid fa-key"></i>
+                  <i className="fa-solid fa-phone"></i>
                   <input autoComplete="off" className={inputDesign} type="tel" {...register("phone")} name="phone" placeholder="Phone" />
                 </div>
                 <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
-                  <i className="fa-solid fa-phone"></i>
+                  <i className="fa-solid fa-key"></i>
                   <input autoComplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
                 </div>
               </div>
@@ -103,7 +110,7 @@ function App() {
                 <input autoComplete="off" className={inputDesign} type="email" {...register("email")} name="email" placeholder="Email" />
               </div>                
               <div className="bg-[#000C2C] w-full flex pl-5 justify-start items-center border-[3px] rounded-xl border-[#0152D1]">
-                <i className="fa-solid fa-phone"></i>
+                <i className="fa-solid fa-key"></i>
                 <input autoComplete="off" className={inputDesign} type="password" {...register("password")} name="password" placeholder="Password" />
               </div>
               </div>
