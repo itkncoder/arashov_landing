@@ -4,12 +4,23 @@ import tg from "@/assets/images/tg.png"
 import user from "@/assets/images/user.png"
 import Accordion from "@/components/accordion/accordion"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import axios from "axios"
 
 const Me = () => {
 
     const [dropdown, setDropdown] = useState(false)
     const [dropdownNow, setDropdownNow] = useState('')
+
+    const [dataUser, setDataUser] = useState([])
+
+    useEffect(() => {
+        axios.get("https://arashovplatform.onrender.com/api/v1/student/me", {
+            headers: {
+                token: localStorage.getItem('token')
+            }
+        }).then(res => console.log(res.data.data))
+    }, [])
 
     const arr = [
         {
@@ -42,18 +53,18 @@ const Me = () => {
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-envelope text-xl"></i>
                         <p className="mezzardBold">EMAIL :</p>
-                        <p className="mezzardBold">itkncoder@gmail.com</p>
+                        <p className="mezzardBold">{dataUser?.email}</p>
                     </div>
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-phone text-xl"></i>
                         <p className="mezzardBold">PHONE :</p>
-                        <p className="mezzardBold">+998 90 787 61 54</p>
+                        <p className="mezzardBold">{dataUser?.phone}</p>
                     </div>
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-credit-card text-xl"></i>
                         <p className="mezzardBold">TO'LOV :</p>
-                        <p className="mezzardBold text-green-600">To'langan</p>
-                        <a href="./" className="flex justify-center items-center bg-blue-700 py-1 hover:bg-blue-800 px-6 rounded-lg gap-3 mezzardBold ml-4" ><Image src={tg} className="w-6" />Gruppa</a>
+                        <p className={`mezzardBold ${dataUser?.paymentType === "To'langan" ? "text-green-600" : "text-red-600"}`}>{dataUser?.paymentType}</p>
+                        {dataUser?.payment && <a href="./" className="flex justify-center items-center bg-blue-700 py-1 hover:bg-blue-800 px-6 rounded-lg gap-3 mezzardBold ml-4" ><Image src={tg} className="w-6" />Gruppa</a>}
                     </div>
                 </div>
                 <div className="mt-8">
