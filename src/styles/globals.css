@@ -45,8 +45,8 @@ body{
   background-color: #000b1d;
   color: #fff;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
+  max-width: 100%;
+  width: 100vw;
 }
 
 .home__btn{
