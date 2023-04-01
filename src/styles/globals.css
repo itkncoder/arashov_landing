@@ -746,7 +746,7 @@ input {
   top: 5px;
 }
 .card-description{
-  padding: 15px 25px;
+  padding: 10px 25px 0px 30px;
 
   list-style: none;
   height: auto;
