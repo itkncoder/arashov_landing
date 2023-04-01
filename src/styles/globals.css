@@ -36,7 +36,6 @@
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 100%;
 }
 img {
   width: fit-content;
@@ -46,7 +45,6 @@ body{
   background-color: #000b1d;
   color: #fff;
   overflow-x: hidden;
-  max-width: 100%;
 }
 
 @media screen and (max-width: 550px) {
