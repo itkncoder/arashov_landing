@@ -97,10 +97,10 @@ const PriceData = () => {
      <Swiper
       breakpoints={{
         420: {
-          slidesPerView: 1.2,
+          slidesPerView: 1.1,
         },
         460: {
-          slidesPerView: 1.25,
+          slidesPerView: 1.2,
         },
         580: {
           slidesPerView: 1.4,
@@ -128,7 +128,7 @@ const PriceData = () => {
         }
       }}
       spaceBetween={1}
-      slidesPerView={1.2}
+      slidesPerView={1.1}
      >
       {cardData.map((card, index) => (
         <SwiperSlide>

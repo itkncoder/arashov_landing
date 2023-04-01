@@ -551,7 +551,7 @@ body{
    height: 350px;
  }
  .main__left__header {
-   max-width: 300px;
+   width: 100%;
    margin-top: -100px auto;
 }
   .main__left p {
