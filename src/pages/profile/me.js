@@ -39,7 +39,7 @@ const Me = () => {
             if (!e.target.classList.contains("drowdown-item")) {
                 setDropdownNow(false)
             }
-        }} className="max-w-screen-xl mx-auto">
+        }} className="max-w-screen-xl mx-auto min-h-screen">
             <header className="flex justify-between items-center py-8">
                 <Link href="/">
                     <Image src={logo} alt="Logo" className="w-40" />
