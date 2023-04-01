@@ -6,7 +6,7 @@ import {memo} from "react";
 
 const Main = () => {
   return (
-    <main className="main">
+    <main className="main m-0 p-0">
      <div data-aos="fade-left" className="main__left">
        <div className="main__left__header">
         <h1 className="mezzardBold">KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING</h1>

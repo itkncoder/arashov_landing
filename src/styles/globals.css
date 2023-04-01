@@ -396,19 +396,18 @@ body{
 
 /* Main section styling */
 .main {
-  height: 85vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 0rem 100px;
+  height: fit-content;
   background-color: #000B1D;
 }
 
 @media screen and (max-width: 750px) {
   .main__left {
     order: 1 !important;
-    width: fit-content;
     margin: 55px 0;
   }
   .competition-image img {
@@ -427,10 +426,9 @@ body{
 .main__right {
 
   width: 600px;
-  height: 100%;
   display: flex;
   align-items: center;
-  
+
 }
 .main__right{
  background: url('../assets/images/MainBackground.png')no-repeat center;
@@ -546,7 +544,8 @@ body{
 @media screen and (max-width: 768px) {
  .main__left{
    padding: 0 15px;
-   height: 350px;
+   /* height: 350px; */
+   margin: 250px 0 500px 0;
  }
  .main__left__header {
    width: 100%;
@@ -585,7 +584,7 @@ body{
    font-size: .9rem;
    padding:9px 20px;
    border-radius: 10px;
-   margin-top: 30px;
+   margin-top: 75px;
    font-weight: 700;
   }
   .name {
