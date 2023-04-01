@@ -123,7 +123,7 @@ function App() {
           </form>
         </>}
         <div className="flex justify-end my-2 items-center text-sm text-gray-200 px-4 rounded-md py-0.5 mezzardBold">
-          <p className="cursor-pointer hover:underline" onClick={() => setLoginOrRegister(prev => !prev)}>{loginOrRegister ? "Tizimga kirish" : "Ro'yhatdan o'tish"}</p>
+          <p className="cursor-pointer hover:underline" onClick={() => router.push(`/profile/${loginOrRegister ? "login" : "register"}`)}>{loginOrRegister ? "Tizimga kirish" : "Ro'yhatdan o'tish"}</p>
         </div>
       </div>
     </div>

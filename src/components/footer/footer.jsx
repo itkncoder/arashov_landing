@@ -22,9 +22,9 @@ const Footer = () => {
           <p>© {date} <Link href="/">ARASHOV</Link>. All rights reserved.</p>
         </div>
         <div className="social">
-          <a href="#">Home</a>
-          <a href="">Contact</a>
-          <SocialLink link={"https://telegram.com"} img={TelegramIcon} />
+          <Link href="/">Home</Link>
+          <Link href="/contact">Contact</Link>
+          <SocialLink link={"https://t.me/ARASHOV_TRADING_ACADEMY"} img={TelegramIcon} />
           <SocialLink link={"https://www.instagram.com/arashov_trading_academy/"}  img={InstagramIcon} />
           <SocialLink link={"https://www.tiktok.com/@arashov_trader"}  img={TiktokIcon} />
           <SocialLink link={"https://www.youtube.com/@arashovTrader"}  img={YouTubeIcon} />

@@ -40,7 +40,7 @@ const cardData = [
          "O’quvchilar orasida Chat guruh"
        ],
        button: "ULANISH",
-       link: "https:t.me/arashov"
+       link: "https://t.me/ARASHOV_TRADER"
      },
      {
        title: "OFFLINE",
@@ -62,7 +62,7 @@ const cardData = [
          "Dars jarayonida real hisobda savdo qilishni o’rganish",
        ],
        button: "ULANISH",
-       link: "https:t.me/arashov"
+       link: "https://t.me/ARASHOV_TRADER"
      },
      {
        title: "VIP",
@@ -86,7 +86,7 @@ const cardData = [
          "Shaxsan o’zim bilan savdo qilasiz",
        ],
        button: "ULANISH",
-       link: "https:t.me/arashov"
+       link: "https://t.me/ARASHOV_TRADER"
      },
      
    ];
