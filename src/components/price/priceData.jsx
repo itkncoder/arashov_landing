@@ -1,7 +1,6 @@
 import {memo} from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Autoplay } from "swiper";
 import corona from "@/assets/images/corona.png"
 import Image from "next/image"
 import Link from "next/link"
@@ -93,7 +92,7 @@ const cardData = [
 
 const PriceData = () => {
   return (
-     <div data-aos="fade-up" className="card-container">
+     <div data-aos="fade-up" className="card-container cursor-pointer">
      <Swiper
       breakpoints={{
         420: {
@@ -128,7 +127,7 @@ const PriceData = () => {
         }
       }}
       spaceBetween={1}
-      slidesPerView={1.1}
+      slidesPerView={1.2}
      >
       {cardData.map((card, index) => (
         <SwiperSlide>

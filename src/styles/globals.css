@@ -391,7 +391,7 @@ body{
 }
 
 .swiper {
-  height: fit-content !important;
+  width: fit-content !important;
 }
 
 /* Main section styling */
@@ -545,7 +545,7 @@ body{
  .main__left{
    padding: 0 15px;
    /* height: 350px; */
-   margin: 250px 0 500px 0;
+   margin: 250px 0 0px 0;
  }
  .main__left__header {
    width: 100%;
@@ -674,7 +674,6 @@ input {
   height: auto;
 }
 .card-container{
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -697,10 +696,12 @@ input {
   border-radius: 20px;
   box-shadow: inset -3px -5px 3px #13243f;
   height: 780px;
+  width: fit-content;
   max-width: 400px;
 }
 .card-4 {
   height: 920px !important;
+  width: fit-content !important;
 }
 
 .bright1{
@@ -778,8 +779,16 @@ input {
   overflow: hidden;
 }
 @media screen and (min-width: 880px) {
+  .swiper-slide {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 879px) {
   .swiper {
-    height: 960px !important;
+    width: fit-content !important;
+  }
+  .swiper-slide {
+    width: fit-content !important;
   }
 }
 .card-footer .buy:hover {
@@ -913,9 +922,9 @@ box-shadow: inset -4px  4px  4px #142540;
     padding-top: 150px;
   }
   .card-container .card{
-    height: auto;
+    height: fit-content;
     margin-bottom: 40px;
-    width: 300px;
+    width: 300px !important;
   }
   .sponsor{
     width: 100%;
