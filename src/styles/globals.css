@@ -29,7 +29,6 @@
 *{
   margin: 0;
   padding: 0;
-  max-width: 100%;
   box-sizing: border-box;
   font-family: Mazzard;
   font-weight: 400;
@@ -38,9 +37,6 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 @media screen and (max-width: 550px) {
   .wrapper {
@@ -54,11 +50,10 @@ img {
 body{
   background-color: #000b1d;
   color: #fff;
-  width: 100%;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
 }
 
 .home__btn{
