@@ -93,7 +93,7 @@ const cardData = [
 
 const PriceData = () => {
   return (
-     <div data-aos="fade-up" className="card-container cursor-pointer">
+     <div data-aos="fade-up" className="card-container wrapper cursor-pointer">
      <Swiper
       breakpoints={{
         420: {
@@ -128,7 +128,7 @@ const PriceData = () => {
         }
       }}
       spaceBetween={1}
-      slidesPerView={1.1}
+      slidesPerView={1}
       slidesPerGroup={1}
      >
       {cardData.map((card, index) => (
