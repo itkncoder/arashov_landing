@@ -102,19 +102,19 @@ const PriceData = () => {
        breakpoints={{
          "@0.00": {
            slidesPerView: 1,
-           spaceBetween: 10,
+           spaceBetween: 0.1,
          },
          "@0.75": {
            slidesPerView: 2,
-           spaceBetween: 20,
+           spaceBetween: 0.2,
          },
          "@1.00": {
            slidesPerView: 3,
-           spaceBetween: 40,
+           spaceBetween: 0.3,
          },
          "@1.50": {
            slidesPerView: 4,
-           spaceBetween: 50,
+           spaceBetween: 0.4,
          },
        }}
        navigation={true}

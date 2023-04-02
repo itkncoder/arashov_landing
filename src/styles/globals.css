@@ -723,6 +723,7 @@ input {
 }
 
 .mySwiper {
+  max-width: 100vw !important;
   width: 100vw !important;
   display: flex;
   justify-content: center;
@@ -732,14 +733,15 @@ input {
 @media screen and (max-width: 580px) {
   
   #card-4 {
-    height: 880px !important;
+    height: 840px !important;
     width: 300px !important;
   }
   .corona {
     top: -8px !important;
   }
   #swip {
-    max-width: 80vw !important;
+    max-width: 90vw !important;
+    padding-right: 35px !important;
   }
 }
 
@@ -852,6 +854,7 @@ input {
   color: rgb(45, 45, 45);
   text-decoration: none;
 }
+
 .card-footer .buy .mask{
   width: 100%;
   height: 100%;
