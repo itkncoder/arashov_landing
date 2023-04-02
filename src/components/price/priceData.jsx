@@ -1,6 +1,7 @@
 import {memo} from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Autoplay } from "swiper";
 import corona from "@/assets/images/corona.png"
 import Image from "next/image"
 import Link from "next/link"
@@ -127,15 +128,16 @@ const PriceData = () => {
         }
       }}
       spaceBetween={1}
-      slidesPerView={1.2}
+      slidesPerView={1.1}
+      slidesPerGroup={1}
      >
       {cardData.map((card, index) => (
         <SwiperSlide>
-          <div key={index} className={index === 3 ? "card card-4" : "card"}>
+          <div key={index} className={index === 3 ? "card" : "card"} id={index === 3 && "card-4"}>
           <div className="card-title">
             <div className={index !== 3 ? "bright1" : "bright1 bringht4"}></div>
             {index === 3 && <Image src={corona} className="corona" width={20} />}
-            <p className="mezzardBold">{card.title}</p>
+            <p className={index === 3 ? "mezzardBold vip-title" : "mezzardBold"}>{card.title}</p>
           </div>
             <div className="card-content">
               <ul className="card-description">

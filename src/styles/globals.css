@@ -392,6 +392,15 @@ body{
 
 .swiper {
   width: fit-content !important;
+  height: 980px !important;
+}
+
+.swiper-horizontal {
+  width: fit-content !important;
+}
+
+.swiper-wrapper {
+  width: 100vw !important;
 }
 
 /* Main section styling */
@@ -699,9 +708,19 @@ input {
   width: fit-content;
   max-width: 400px;
 }
-.card-4 {
-  height: 920px !important;
-  width: fit-content !important;
+#card-4 {
+  height: 920px;
+}
+
+@media screen and (max-width: 580px) {
+  
+  #card-4 {
+    height: 820px !important;
+    width: 300px !important;
+  }
+  .corona {
+    top: -8px !important;
+  }
 }
 
 .bright1{
@@ -736,6 +755,9 @@ input {
   text-align: center;
   padding-left: 30px;
   font-size: 26px;
+}
+.vip-title {
+  margin-top: 10px;
 }
 .corona {
   width: 40px;
@@ -779,8 +801,11 @@ input {
   overflow: hidden;
 }
 @media screen and (min-width: 880px) {
+  .swiper {
+    width: fit-content !important;
+  }
   .swiper-slide {
-    width: 310px;
+    width: 310px !important;
   }
 }
 @media screen and (max-width: 879px) {
