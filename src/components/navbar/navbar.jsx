@@ -2,6 +2,7 @@ import logo from '@/assets/images/Logo.png'
 import Image from "next/image"
 import Link from "next/link"
 import {memo} from "react";
+import dynamic from 'next/dynamic'
 
 const Navbar = () => {
   return (
@@ -13,8 +14,8 @@ const Navbar = () => {
           </Link>          
         </div>
           <div className="navbar__buttons">
-            <Link href="/profile/login" className="login-button">LOG IN</Link>
-            <Link href="/profile/register" style={{background: "#0135d3"}} className="register-button">REGISTER</Link>
+            <Link href={localStorage?.getItem('token') ? "/profile/me" : "/profile/login"} className="login-button">{localStorage?.getItem('token') ? "PROFILIM" : "LOG IN"}</Link>
+            {!localStorage?.getItem("token") && <Link href="/profile/register" style={{background: "#0135d3"}} className="register-button">REGISTER</Link>}
           </div>
       </div>
     </nav>

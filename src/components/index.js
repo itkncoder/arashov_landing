@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic'
-
-export {default as Navbar} from './navbar/navbar'
+export {default as Navbar} from './navbar'
 export {default as Main} from './main/main'
 export {default as Usefull} from './usefull/usefull'
 export {default as TraderInfo} from './traderInfo/traderInfo'

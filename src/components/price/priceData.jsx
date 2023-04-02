@@ -1,7 +1,7 @@
 import {memo} from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Autoplay } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import corona from "@/assets/images/corona.png"
 import Image from "next/image"
 import Link from "next/link"
@@ -93,43 +93,33 @@ const cardData = [
 
 const PriceData = () => {
   return (
-     <div data-aos="fade-up" className="card-container wrapper cursor-pointer">
+     <div data-aos="fade-up" className="card-container mySwiper wrapper cursor-pointer">
      <Swiper
-      breakpoints={{
-        420: {
-          slidesPerView: 1.1,
-        },
-        460: {
-          slidesPerView: 1.2,
-        },
-        580: {
-          slidesPerView: 1.4,
-        },
-        720: {
-          slidesPerView: 1.8,
-        },
-        820: {
-          slidesPerView: 2.2,
-        },
-        900: {
-          slidesPerView: 2.5,
-        },
-        950: {
-          slidesPerView: 2.8,
-        },
-        1000: {
-          slidesPerView: 3.1,
-        },
-        1080: {
-          slidesPerView: 3.6,
-        },
-        1300: {
-          slidesPerView: 4,
-        }
-      }}
-      spaceBetween={1}
-      slidesPerView={1}
-      slidesPerGroup={1}
+       spaceBetween={50}
+       slidesPerView={4}
+       slidesPerGroup={1}
+       loopFillGroupWithBlank={true}
+       breakpoints={{
+         "@0.00": {
+           slidesPerView: 1,
+           spaceBetween: 10,
+         },
+         "@0.75": {
+           slidesPerView: 2,
+           spaceBetween: 20,
+         },
+         "@1.00": {
+           slidesPerView: 3,
+           spaceBetween: 40,
+         },
+         "@1.50": {
+           slidesPerView: 4,
+           spaceBetween: 50,
+         },
+       }}
+       navigation={true}
+       modules={[Pagination, Navigation]}
+       id="swip"
      >
       {cardData.map((card, index) => (
         <SwiperSlide>

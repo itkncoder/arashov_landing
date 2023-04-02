@@ -722,6 +722,13 @@ input {
   height: 960px !important;
 }
 
+.mySwiper {
+  width: 100vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 580px) {
   
   #card-4 {
@@ -730,6 +737,9 @@ input {
   }
   .corona {
     top: -8px !important;
+  }
+  #swip {
+    max-width: 80vw !important;
   }
 }
 

@@ -13,6 +13,7 @@ const Me = () => {
     const [dropdownNow, setDropdownNow] = useState('')
 
     const [dataUser, setDataUser] = useState([])
+    const [courses, setCourses] = useState([])
 
     useEffect(() => {
         axios.get("https://arashovplatform.onrender.com/api/v1/student/me", {
@@ -20,19 +21,12 @@ const Me = () => {
                 token: localStorage.getItem('token')
             }
         }).then(res => setDataUser(res.data.data))
-    }, [])
 
-    const arr = [
-        {
-            num: 34545
-        },
-        {
-            num: 34543
-        },
-        {
-            num: 34542
-        },
-    ]
+        axios.get("https://arashovplatform.onrender.com/api/v1/courses/").then(res => {
+            setCourses(res.data.data)
+            console.log(courses);
+        })
+    }, [])
 
     return (  
         <div onClick={(e) => {
@@ -74,9 +68,9 @@ const Me = () => {
                             {!dataUser?.payment && <Link className="mezzardBold py-2 px-6 rounded-lg bg-blue-700 py-1 hover:bg-blue-800" href="/checkout">To'lov qilish</Link>}
                         </div>
                     </div>
-                    {arr.map(function(item, index) {
+                    {/* {arr.map(function(item, index) {
                         return <Accordion isPayed={dataUser?.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} />
-                    })}
+                    })} */}
                 </div>
             </main>
         </div>
