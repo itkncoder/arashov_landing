@@ -14,19 +14,19 @@ function Index() {
     return (
         <Layout>
             <Head>
-                <title>KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING</title>
-                <meta name="description" content="KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
+                <title>Arashov - Kriptovalyutada daromad qilishni o'rganing</title>
+                <meta name="description" content="Kriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
                 <meta name="keywords" content="arashov, online, kripto, cripto, pul, soqqa, trader, traderlik, treydirlik, arashov o'rgatish, o'rganish, traderlik darslari, cripto o'qish, arashovonline" />
                 <link rel="shortcut icon" href="../assets/images/Logo.png" type="image/x-icon" />
 
                 <meta name="robots" content="index, follow"/>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="language" content="Uzbek"/>
                 <meta name="author" content="arashov"/>
 
                 <meta property="og:title" content="ARASHOV" />
                 <meta property="og:site_name" content="Arashov"/>
-                <meta property="og:description" content="KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
+                <meta property="og:description" content="Kriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
                 <meta property="og:image" content="../assets/images/Logo.png" />
             </Head>
             <main>

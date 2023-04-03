@@ -7,9 +7,9 @@ export default function Document() {
         <link rel="shortcut icon" href="/Logo.png" type="image/x-icon"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING</title>
-        <meta name="title" content="KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING"/>
-        <meta name="description" content="KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang"/>
+        <title>Kriptovalyutada daromad qilishni o'rganing</title>
+        <meta name="title" content="Kriptovalyutada daromad qilishni o'rganing"/>
+        <meta name="description" content="Kriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang"/>
         <meta name="keywords" content="arashov, online, kripto, cripto, pul, soqqa, trader, traderlik, treydirlik, arashov o'rgatish, o'rganish, traderlik darslari, cripto o'qish, arashovonline"/>
         <meta name="robots" content="index, follow"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -18,7 +18,7 @@ export default function Document() {
 
         <meta property="og:title" content="ARASHOV" />
         <meta property="og:site_name" content="Arashov"/>
-        <meta property="og:description" content="KRIPTOVALYUTADA DAROMAD QILISHNI O’RGANING, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
+        <meta property="og:description" content="KKriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
         <meta property="og:image" content="/Logo.png" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
