@@ -27,7 +27,7 @@ const Blogs = () => {
             }
         }} className="px-2">
             <header className="wrapper">
-                <div className="my-8">
+                <div className="my-8 w-fit">
                     <Link href="/" className="w-fit">
                         <Image src={logo} alt="Logo" className="w-40" />
                     </Link>          
