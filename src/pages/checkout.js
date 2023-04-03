@@ -34,7 +34,17 @@ const Checkout = () => {
                     <div className="bg-[#001B44] boxshadowed3 item-modal flex text-gray-200 justify-center items-center relative flex-col gap-5 rounded-2xl py-10 px-20">
                         <i className="fa-solid fa-xmark text-gray-200 text-lg absolute top-2 right-5 cursor-pointer"></i>
                         <Image src={qr} className="w-52 item-modal" />
-                        <p className="mezzardBold">PayID: 230962400</p>
+                        <div className="item-modal flex items-center justify-center gap-1.5">
+                            <p onClick={(e) => {
+                                navigator.clipboard.writeText(230962400)
+                                e.target.classList.add("text-gray-600")
+                                e.target.textContent = "copied!"
+                                setTimeout(() => {
+                                    e.target.textContent = "Binance Pay ID: 230962400"
+                                }, 1500)
+                            }} className="item-modal cursor-pointer mezzardBold">Binance Pay ID: 230962400</p>
+                            <i className="fa-solid cursor-pointer hover:text-gray-500 fa-copy mb-1 text-gray-400 item-modal"></i>
+                        </div>
                         <p className="item-modal text-gray-200 mezzardBold text-lg">Chekni Menejerga yuboring: <a className="mx-2 mezzardBold text-gray-800 text-lg bg-gray-200 py-2 px-4 rounded-lg item-modal" href="https://t.me/ARASHOV_TRADER">Menejer</a></p>
                     </div>
                 </div>}
