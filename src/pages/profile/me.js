@@ -22,9 +22,12 @@ const Me = () => {
             }
         }).then(res => setDataUser(res.data.data))
 
-        axios.get("https://arashovplatform.onrender.com/api/v1/courses/").then(res => {
+        axios.get("https://arashovplatform.onrender.com/api/v1/courses/", {
+            headers: {
+                token: localStorage.getItem('token')
+            }
+        }).then(res => {
             setCourses(res.data.data)
-            console.log(courses);
         })
     }, [])
 
@@ -68,9 +71,9 @@ const Me = () => {
                             {!dataUser?.payment && <Link className="mezzardBold py-2 px-6 rounded-lg bg-blue-700 py-1 hover:bg-blue-800" href="/checkout">To'lov qilish</Link>}
                         </div>
                     </div>
-                    {/* {arr.map(function(item, index) {
-                        return <Accordion isPayed={dataUser?.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} />
-                    })} */}
+                    {courses.map(function(item, index) {
+                        return <Accordion isPayed={dataUser?.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} data={item} />
+                    })}
                 </div>
             </main>
         </div>
