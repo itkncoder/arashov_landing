@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ReactPlayer from "react-player"
 
 const Accordion = ({setDropdown, dropdown, dropdownNow, setDropdownNow, indexOf, isPayed, data, index}) => {
 
@@ -8,8 +9,8 @@ const Accordion = ({setDropdown, dropdown, dropdownNow, setDropdownNow, indexOf,
                 <div onClick={() => setDropdownNow(dropdownNow === indexOf ? false : indexOf)} className="drowdown-item w-full mezzardBold">
                     #{index + 1} {data.videoTitle} <i className="drowdown-item fa-solid fa-angle-down"></i>
                 </div>
-                {dropdownNow === indexOf && <div className="drowdown-item absolute shadow-lg shadow-gray-900 w-full z-20 top-12 flex flex-col gap-1 right-0 bg-[#00112C] px-2 py-3 rounded-lg">
-                    <video className={`${isPayed ? "drowdown-item" : "drowdown-item cursor-no-drop"}`} src={data.videoLink} controls></video>
+                {dropdownNow === indexOf && <div className="video-div drowdown-item absolute shadow-lg shadow-gray-900 w-full z-20 top-12 flex flex-col gap-1 right-0 bg-[#00112C] px-2 py-3 rounded-lg">
+                    <ReactPlayer controls className={`course-video ${isPayed ? "drowdown-item" : "drowdown-item cursor-no-drop"}`} url={data.videoLink} />
                 </div>}
             </div>
         </div>
