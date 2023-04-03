@@ -27,7 +27,7 @@ function Index() {
                 <meta property="og:title" content="ARASHOV" />
                 <meta property="og:site_name" content="Arashov"/>
                 <meta property="og:description" content="Kriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
-                <meta property="og:image" content="../assets/images/Logo.png" />
+                <meta property="og:image" content="../assets/images/fav.png" />
             </Head>
             <main>
                 <div className="site-top">
