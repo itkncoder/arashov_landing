@@ -52,10 +52,10 @@ const Checkout = () => {
                     <div className="flex flex-col items-center w-full">
                         <h1 className="text-2xl text-center md:text-4xl my-2 mezzardBold">To'lov qilish turlari</h1>
                         <a target="_blank" href="http://payme.uz/@connectuz" className="max-w-md flex justify-center items-center gap-3 w-full mezzardBold hover:bg-gray-200 font-semibold text-lg md:text-3xl text-gray-100 py-3 md:py-5 px-3 md:px-12 bg-white rounded-2xl my-2 w-full">
-                            <Image src={payme} className="w-40 object-cover h-10" /> 
+                            <Image width={400} height={300} src={payme} className="w-40 object-cover h-10" /> 
                         </a>
-                        <h1 onClick={() => setOpen(true)} className="max-w-md w-full mezzardBold text-lg flex justify-center items-center md:text-3xl text-gray-800 py-1 px-3 md:px-12 bg-white cursor-pointer hover:bg-gray-200 rounded-2xl my-2 w-full"><span className="mezzardBold flex justify-start items-center">
-                            <Image src={bit} className="w-40 object-cover h-20" />
+                        <h1 onClick={() => setOpen(true)} className="max-w-md w-full mezzardBold text-lg flex justify-center items-center md:text-3xl text-gray-800 py-1 px-3 md:px-12 bg-white cursor-pointer hover:bg-gray-200 rounded-2xl my-2 w-full"><span className="mezzardBold flex justify-start items-center gap-2">
+                            <Image width={500} height={500} src={bit} className="object-cover  h-20" />
                             <p className="text-basic mezzardBold sm:w-fit -ml-8">Binance pay</p>
                         </span></h1>
                     </div>

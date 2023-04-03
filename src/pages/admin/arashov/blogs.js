@@ -94,7 +94,7 @@ const Blogs = () => {
 
             <div className="w-full py-4">
                 <div className="flex flex-col items-center gap-2">
-                    {!viewOrPost ? <form onSubmit={handleSubmit(onSubmitBlog)} className="relative flex w-9/12 justify-center my-2 items-start bg-gray-800 px-4 py-5 rounded-xl w-fit items-start gap-2">
+                    {!viewOrPost ? <form onSubmit={handleSubmit(onSubmitBlog)} className="relative flex w-8/12 justify-center my-2 items-start bg-gray-800 px-4 py-5 rounded-xl w-fit items-start gap-2">
 
                         <p className="flex justify-center absolute top-3 left-4 items-center mezzardBold text-sm">{postOrPut ? "-POST-" : "-PUT-"}</p>
 
@@ -114,7 +114,7 @@ const Blogs = () => {
 
                             <div className="w-full">
                                 <h1 className="text-xl">Description</h1>
-                                <input onInput={e => setInputs({...inputs, description: e.target.value})} value={inputs.description}  {...register("description")} required className="text-gray-100 outline-0 border-0 bg-gray-700 rounded-md px-5 py-2 w-full focus:ring-2 ring-gray-600" type="text" placeholder="description..." name="description" id="" />
+                                <textarea onInput={e => setInputs({...inputs, description: e.target.value})} value={inputs.description}  {...register("description")} required className="text-gray-100 outline-0 border-0 bg-gray-700 rounded-md px-5 py-2 w-full focus:ring-2 ring-gray-600" type="text" placeholder="description..." name="description" id="" />
                             </div>
 
                             <div className="w-full">

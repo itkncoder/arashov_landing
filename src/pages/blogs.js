@@ -36,22 +36,16 @@ const Blogs = () => {
 
             {!loader ? <main className="max-w-screen-lg mx-auto my-20">
                 <div className="my-2">
-                    <h1 className="text-3xl mezzardBold">ARASHOV YANGILIKLAR</h1>
+                    <h1 className="text-3xl mezzardBold">ARASHOV BLOG</h1>
                 </div>
                 {blogs.map((item, index) =>
-                    <div className="boxshadowed3 py-3 px-6 rounded-2xl my-5">
-                        <Image src={item.image} width={100} height={150} className="w-full h-80 object-cover rounded-2xl boxshadowed3 my-3 p-2" />
-                        <h1 className="text-2xl mezzardBold">{item.title}</h1>
-                        <p className="truncate max-w-md">{item.shortDescription}</p>
-                        <p className="truncate max-w-md">{item.description}</p>
-                        <div>
-                            <div className="w-full my-3 relative cursor-pointer drowdown-item dropdown-top bg-[#00183E] boxshadowed py-3 px-6 rounded-lg active:bg-gray-600 transition-all hover:bg-[#00112C] flex items-center justify-start pl-8 uppercase gap-2">
-                                <div onClick={() => setDropdownNow(item._id === dropdownNow ? false : item._id)} className="drowdown-item w-full mezzardBold">
-                                    # {item.description} to'liq <i className="drowdown-item fa-solid fa-angle-down"></i>
-                                </div>
-                                {dropdownNow === item._id && <div className="video-div drowdown-item absolute shadow-lg shadow-gray-900 w-full z-20 top-12 flex flex-col gap-1 right-0 bg-[#00112C] px-2 py-3 rounded-lg">
-                                    <p className="text-gray-200 drowdown-item">{item.description}</p>
-                                </div>}
+                    <div className="bg-gray-300 py-3 px-8 rounded-2xl my-5 flex justify-around items-start gap-5">
+                        <Image src={item.image} width={550} height={350} className="boxshadowed w-6/12 h-80 object-cover rounded-2xl my-3 p-2" />
+                        <div className="w-6/12 my-8">
+                            <h1 className="text-gray-800 text-3xl mezzardBold">{item.title}</h1>
+                            <p className="text-gray-700 text-lg mezzardBold truncate max-w-md">{item.shortDescription}</p>
+                            <div className="mt-6">
+                                <Link href={`/blogs/${item._id}`} className="text-gray-100 boxshadowed bg-blue-800 hover:bg-blue-700 mezzardBold py-2 px-8 rounded-xl w-fit truncate max-w-md">To'liq o'qish</Link>
                             </div>
                         </div>
                     </div>
