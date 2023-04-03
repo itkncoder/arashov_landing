@@ -9,12 +9,14 @@ import logo from "@/assets/images/Logo.png"
 const Blogs = () => {
 
     const [dropdownNow, setDropdownNow] = useState('')
+    const [loader, setLoader] = useState(true)
 
     const [ blogs, setBlogs ] = useState([])
 
     useEffect(() => {
         axios.get("https://arashovplatform.onrender.com/api/v1/blogs/").then(res => {
             setBlogs(res.data.data)
+            setLoader(false)
         })
     }, [])
 
@@ -32,7 +34,7 @@ const Blogs = () => {
                 </div>
             </header>
 
-            <main className="max-w-screen-lg mx-auto my-20">
+            {!loader ? <main className="max-w-screen-lg mx-auto my-20">
                 <div className="my-2">
                     <h1 className="text-3xl mezzardBold">ARASHOV YANGILIKLAR</h1>
                 </div>
@@ -55,6 +57,11 @@ const Blogs = () => {
                     </div>
                 )}
             </main>
+            :
+            <div className="flex h-96 justify-center items-center">
+                <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            }
 
             <div className="my-10">
                 <Footer/>
