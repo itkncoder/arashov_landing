@@ -34,7 +34,8 @@ const Checkout = () => {
                     <div className="bg-[#001B44] boxshadowed3 item-modal flex text-gray-200 justify-center items-center relative flex-col gap-5 rounded-2xl py-10 px-20">
                         <i className="fa-solid fa-xmark text-gray-200 text-lg absolute top-2 right-5 cursor-pointer"></i>
                         <Image src={qr} className="w-52 item-modal" />
-                        <p className="item-modal text-gray-200 mezzardBold text-lg">Chekni Menejerga yuboring: <a className="mx-2 mezzardBold text-gray-800 text-lg bg-gray-200 py-2 px-4 rounded-lg item-modal" href="">Menejer</a></p>
+                        <p className="mezzardBold">PayID: 230962400</p>
+                        <p className="item-modal text-gray-200 mezzardBold text-lg">Chekni Menejerga yuboring: <a className="mx-2 mezzardBold text-gray-800 text-lg bg-gray-200 py-2 px-4 rounded-lg item-modal" href="https://t.me/ARASHOV_TRADER">Menejer</a></p>
                     </div>
                 </div>}
                 <div className="flex mt-3 mb-32 justify-center items-start px-2 boxshadowed2 py-20 rounded-2xl px-32 w-fit">

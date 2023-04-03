@@ -65,17 +65,17 @@ const Me = () => {
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-envelope text-xl"></i>
                         <p className="mezzardBold">EMAIL :</p>
-                        <p className="mezzardBold">{dataUser?.email}</p>
+                        <p className="mezzardBold">{dataUser.email}</p>
                     </div>
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-phone text-xl"></i>
                         <p className="mezzardBold">PHONE :</p>
-                        <p className="mezzardBold">{dataUser?.phone}</p>
+                        <p className="mezzardBold">{dataUser.phone}</p>
                     </div>
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-credit-card text-xl"></i>
                         <p className="mezzardBold">TO'LOV :</p>
-                        <p className={`mezzardBold ${dataUser?.payment ? "text-green-600" : "text-red-600"}`}>{dataUser?.paymentType}</p>
+                        <p className={`mezzardBold ${dataUser.payment ? "text-green-600" : "text-red-600"}`}>{dataUser.paymentType}</p>
                         {dataUser?.payment && <a href="./" className="flex justify-center items-center bg-blue-700 py-1 hover:bg-blue-800 px-6 rounded-lg gap-3 mezzardBold ml-4" ><Image src={tg} className="w-6" />Gruppa</a>}
                     </div>
                 </div>
@@ -83,11 +83,11 @@ const Me = () => {
                     <div className="flex justify-between items-center">
                         <h1 className="mezzardBold text-2xl">KURSLAR:</h1>
                         <div>
-                            {!dataUser?.payment && <Link className="mezzardBold py-2 px-6 rounded-lg bg-blue-700 py-1 hover:bg-blue-800" href="/checkout">To'lov qilish</Link>}
+                            {!dataUser.payment ? <Link className="mezzardBold py-2 px-6 rounded-lg bg-blue-700 py-1 hover:bg-blue-800" href="/checkout">To'lov qilish</Link> : ""}
                         </div>
                     </div>
                     {courses.map(function(item, index) {
-                        return <Accordion isPayed={dataUser?.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} data={item} />
+                        return <Accordion isPayed={dataUser.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} data={item} />
                     })}
                 </div>
             </main>
