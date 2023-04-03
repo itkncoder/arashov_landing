@@ -39,8 +39,8 @@ const Blogs = () => {
                     <h1 className="text-3xl mezzardBold">ARASHOV BLOG</h1>
                 </div>
                 {blogs.map((item, index) =>
-                    <div className="bg-gray-300 py-3 px-8 rounded-2xl my-5 flex justify-around items-start gap-5">
-                        <Image src={item.image} width={550} height={350} className="boxshadowed w-6/12 h-80 object-cover rounded-2xl my-3 p-2" />
+                    <div className="bg-gray-300 flex-col md:flex-row py-3 px-8 rounded-2xl my-5 flex justify-around items-start gap-5">
+                        <Image src={item.image} width={550} height={350} className="boxshadowed w-full md:w-6/12 h-80 object-cover rounded-2xl my-3 p-2" />
                         <div className="w-6/12 my-8">
                             <h1 className="text-gray-800 text-3xl mezzardBold">{item.title}</h1>
                             <p className="text-gray-700 text-lg mezzardBold truncate max-w-md">{item.shortDescription}</p>
