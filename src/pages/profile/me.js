@@ -6,10 +6,15 @@ import Accordion from "@/components/accordion/accordion"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import axios from "axios"
+import { useRouter } from "next/router"
 
 const Me = () => {
 
+    const router = useRouter()
+    const { type } = router.query
+
     const [dropdown, setDropdown] = useState(false)
+    const [dropdownProfile, setDropdownProfile] = useState(false)
     const [dropdownNow, setDropdownNow] = useState('')
 
     const [dataUser, setDataUser] = useState([])
@@ -41,8 +46,17 @@ const Me = () => {
                 <Link href="/">
                     <Image src={logo} alt="Logo" className="w-40" />
                 </Link>  
-                <div>
-                    <Image src={`https://picsum.photos/800/?random&t="${new Date().getTime()}`} width={40} height={30} className="w-12 h-auto cursor-pointer rounded-full hover:scale-110 transition-all" />
+                <div onClick={() => setDropdownProfile(prev => !prev)} className="relative">
+                    <div className="mezzardBold">
+                        <Image src={`https://picsum.photos/800/?random`} width={40} height={30} className="w-12 h-auto cursor-pointer rounded-full hover:scale-110 transition-all" />
+                    </div>
+                    {dropdownProfile && 
+                    <div className="absolute shadow-lg bg-[#001941] hover:bg-[#001538] flex justify-end items-end px-8 shadow-gray-900 w-40 z-20 top-14 flex flex-col gap-1 right-0 px-2 py-3 rounded-lg">
+                        <p onClick={() => {
+                            localStorage.removeItem('token')
+                            router.push('/')
+                        }} className="cursor-pointer hover:text-gray-300 mezzardBold">CHIQISH</p>
+                    </div>}
                 </div>
             </header>
             <main>
@@ -60,7 +74,7 @@ const Me = () => {
                     <div className="flex justify-center items-center gap-3">
                         <i className="fa-solid fa-credit-card text-xl"></i>
                         <p className="mezzardBold">TO'LOV :</p>
-                        <p className={`mezzardBold ${dataUser?.paymentType === "To'langan" ? "text-green-600" : "text-red-600"}`}>{dataUser?.paymentType}</p>
+                        <p className={`mezzardBold ${dataUser?.payment ? "text-green-600" : "text-red-600"}`}>{dataUser?.paymentType}</p>
                         {dataUser?.payment && <a href="./" className="flex justify-center items-center bg-blue-700 py-1 hover:bg-blue-800 px-6 rounded-lg gap-3 mezzardBold ml-4" ><Image src={tg} className="w-6" />Gruppa</a>}
                     </div>
                 </div>

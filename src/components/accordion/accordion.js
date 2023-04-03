@@ -1,9 +1,6 @@
-import { useState, useRef } from "react"
 import Link from "next/link"
 
 const Accordion = ({setDropdown, dropdown, dropdownNow, setDropdownNow, indexOf, isPayed, data}) => {
-
-    const dropBlock = useRef(null)
 
     return (  
         <div>
@@ -11,7 +8,7 @@ const Accordion = ({setDropdown, dropdown, dropdownNow, setDropdownNow, indexOf,
                 <div className="mezzardBold">
                     {data.videoTitle} <i className="fa-solid fa-angle-down"></i>
                 </div>
-                {dropdownNow === indexOf && <div ref={dropBlock} className="absolute shadow-lg shadow-gray-900 w-full z-20 top-12 flex flex-col gap-1 right-0 bg-[#00112C] px-2 py-3 rounded-lg">
+                {dropdownNow === indexOf && <div className="absolute shadow-lg shadow-gray-900 w-full z-20 top-12 flex flex-col gap-1 right-0 bg-[#00112C] px-2 py-3 rounded-lg">
                     <video className={`${isPayed ? "" : "cursor-no-drop"}`} src={data.videoLink} controls></video>
                 </div>}
             </div>
