@@ -12,8 +12,7 @@ const Accordion = ({setDropdown, dropdown, dropdownNow, setDropdownNow, indexOf,
                     {data.videoTitle} <i className="fa-solid fa-angle-down"></i>
                 </div>
                 {dropdownNow === indexOf && <div ref={dropBlock} className="absolute shadow-lg shadow-gray-900 w-full z-20 top-12 flex flex-col gap-1 right-0 bg-[#00112C] px-2 py-3 rounded-lg">
-                    <video src={data.videoLink} controls></video>
-                    {/* <p className={`${isPayed ? "" : "cursor-no-drop"} drowdown-item min-w-20 py-1.5 px-5 bg-[#001435] rounded-md hover:ring-2 ring-blue-800 active:ring-4 flex items-center justify-start gap-2`}>Ko'rishlar</p> */}
+                    <video className={`${isPayed ? "" : "cursor-no-drop"}`} src={data.videoLink} controls></video>
                 </div>}
             </div>
         </div>

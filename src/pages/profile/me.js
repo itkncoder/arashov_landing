@@ -42,7 +42,7 @@ const Me = () => {
                     <Image src={logo} alt="Logo" className="w-40" />
                 </Link>  
                 <div>
-                    <Image src={user} className="w-12 cursor-pointer rounded-full hover:scale-110 transition-all" />
+                    <Image src={`https://picsum.photos/800/?random&t="${new Date().getTime()}`} width={40} height={30} className="w-12 h-auto cursor-pointer rounded-full hover:scale-110 transition-all" />
                 </div>
             </header>
             <main>

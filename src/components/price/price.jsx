@@ -20,12 +20,10 @@ const Price = () => {
           <Image className="nonetel" src={Uzcard} alt="Uzcard" />
      </div>
      <div className="payment-crypto">
-      <Link href="./" className="mezzardBold">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>
+      <Link href={localStorage.getItem('token') ? "/checkout" : "/profile/profile" } className="mezzardBold">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>
      </div>
     </section>
   );
 };
 
 export default memo(Price)
-
-

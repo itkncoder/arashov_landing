@@ -22,7 +22,7 @@ const cardData = [
          "Kurator bilan savol javob "
        ],
        button: "SOTIB OLISH",
-       link: "/profile/register"
+       link: localStorage.getItem('token') ? "/checkout" : "/profile/register"
      },
      {
        title: "ONLINE",
@@ -142,7 +142,16 @@ const PriceData = () => {
               <h4 className='discount mezzardBold'>{card.discount}</h4>
               <p className="card-price mezzardBold">{card.price}</p>
               <div className={index !== 3 ? "buy" : "nthfour buy"}>
-                {index !==3 ? <p><Link className="not4 mezzardBold" href={card?.link}>{card?.button}</Link></p>:<p><a className="fourulanish mezzardBold" href="./">{card?.button}</a></p> }
+                {
+                index !==3 ? 
+                <p>
+                  <Link className="not4 mezzardBold" href={card?.link}>{card?.button}</Link>
+                </p>
+                :
+                <p>
+                  <a className="fourulanish mezzardBold" href="./">{card?.button}</a>
+                </p> 
+                }
                 {index ===3 ? <div className='mask'></div> : null}
               </div>
               
