@@ -87,7 +87,7 @@ const Me = () => {
                         </div>
                     </div>
                     {courses.map(function(item, index) {
-                        return <Accordion isPayed={dataUser.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} data={item} />
+                        return <Accordion index={index} isPayed={dataUser.payment} indexOf={index} setDropdown={setDropdown} dropdown={dropdown} dropdownNow={dropdownNow} setDropdownNow={setDropdownNow} data={item} />
                     })}
                 </div>
             </main>
