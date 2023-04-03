@@ -18,7 +18,7 @@ export default function Document() {
 
         <meta property="og:title" content="ARASHOV" />
         <meta property="og:site_name" content="Arashov"/>
-        <meta property="og:description" content="KKriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
+        <meta property="og:description" content="Kriptovalyutada daromad qilishni o'rganing, Biz bilan birgalikda dunyoning istalgan nuqtasidan turib pul ishlang" />
         <meta property="og:image" content="/Logo.png" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
