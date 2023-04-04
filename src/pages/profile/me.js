@@ -8,6 +8,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { useRouter } from "next/router"
 import Head from "next/head"
+import { Footer } from "@/components"
 
 const Me = () => {
 
@@ -19,7 +20,10 @@ const Me = () => {
     const [dropdownNow, setDropdownNow] = useState('')
 
     const [dataUser, setDataUser] = useState([])
+
     const [courses, setCourses] = useState([])
+
+    const [loader, setLoader] = useState(true)
 
     useEffect(() => {
         axios.get("https://arashovplatform.onrender.com/api/v1/student/me", {
@@ -34,6 +38,7 @@ const Me = () => {
             }
         }).then(res => {
             setCourses(res.data.data)
+            setLoader(false)
         })
     }, [])
 
@@ -64,7 +69,7 @@ const Me = () => {
                     </div>}
                 </div>
             </header>
-            <main>
+            {!loader ? <main>
                 <div className="flex relative pb-14 lg:pb-8 justify-between gap-6 lg:gap-14 items-center my-4 boxshadowed3 py-8 px-4 lg:px-14 rounded-xl">
                     <div className="flex w-4/12 lg:w-auto justify-center items-center gap-1 flex-col lg:flex-row md:gap-3">
                         <i className="fa-solid fa-envelope text-xl"></i>
@@ -95,6 +100,14 @@ const Me = () => {
                     })}
                 </div>
             </main>
+            :
+            <div className="h-96 flex justify-center items-center">
+                <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            }
+            <div className="mt-32">
+                <Footer/>
+            </div>
         </div>
     );
 }

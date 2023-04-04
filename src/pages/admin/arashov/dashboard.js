@@ -44,7 +44,6 @@ const Dashboard = () => {
                     
                     <div className="mt-2 w-full flex flex-col gap-2">
                         <Link href={`./add`} className={ `bg-gray-600 flex items-center justify-start gap-4 font-semibold pl-5 hover:ring-2 ring-gray-600 hover:bg-gray-800 cursor-pointer w-full rounded-sm py-2`}><i className="fa-solid fa-add"></i>Add course</Link>
-                        <Link href={`./blogs`} className={ `bg-gray-600 flex items-center justify-start gap-4 font-semibold pl-5 hover:ring-2 ring-gray-600 hover:bg-gray-800 cursor-pointer w-full rounded-sm py-2`}><i className="fa-solid fa-add"></i>Blogs</Link>
                     </div>
 
                 </div>
