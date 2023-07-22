@@ -20,10 +20,10 @@ const Main = () => {
        <div className="background__shadow"></div>
        <div className="name">
         <p>ARASHOV</p>
-        <Image src={CheckIcon} alt="Check" />
+        <Image priority src={CheckIcon} alt="Check" />
        </div>
-       <Image className='main__image' src={MainImage} alt="MainImage" />
-       <Image className='main__image2' src={MainImage2} alt="MainImage" />
+       <Image priority className='main__image' src={MainImage} alt="MainImage" />
+       <Image priority className='main__image2' src={MainImage2} alt="MainImage" />
      </div>
    </main>
    
