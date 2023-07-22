@@ -5,7 +5,7 @@ const UsefullDetail = ({title,description,img}) => {
   return (
     <div data-aos="fade-down" className='usefull__box'>
     <div className="imageBox">
-     <Image src={img} alt="img" width={30} />
+     <Image priority src={img} alt="img" width={30} />
     </div>
       <div className="box__title mezzardBold">{title}</div>
       <div className="box__description">{description}</div>

@@ -4,7 +4,7 @@ import tg from "@/assets/images/tg.png"
 import user from "@/assets/images/user.png"
 import Accordion from "@/components/accordion/accordion"
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo } from "react"
 import axios from "axios"
 import { useRouter } from "next/router"
 import Head from "next/head"
@@ -112,4 +112,4 @@ const Me = () => {
     );
 }
  
-export default Me;
+export default memo(Me);

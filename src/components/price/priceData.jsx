@@ -126,7 +126,7 @@ const PriceData = () => {
           <div key={index} className={index === 3 ? "card" : "card"} id={index === 3 && "card-4"}>
           <div className="card-title">
             <div className={index !== 3 ? "bright1" : "bright1 bringht4"}></div>
-            {index === 3 && <Image src={corona} className="corona" width={20} />}
+            {index === 3 && <Image priority src={corona} className="corona" width={20} />}
             <p className={index === 3 ? "mezzardBold vip-title" : "mezzardBold"}>{card.title}</p>
           </div>
             <div className="card-content">

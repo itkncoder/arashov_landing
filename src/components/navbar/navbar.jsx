@@ -2,7 +2,6 @@ import logo from '@/assets/images/Logo.png'
 import Image from "next/image"
 import Link from "next/link"
 import {memo} from "react";
-import dynamic from 'next/dynamic'
 
 const Navbar = () => {
   return (
@@ -10,7 +9,7 @@ const Navbar = () => {
       <div className="wrapper navbar">
         <div className="navbar__logo">
           <Link href="/">
-            <Image src={logo} alt="Logo" />
+            <Image priority src={logo} alt="Logo" />
           </Link>          
         </div>
           <div className="navbar__buttons">

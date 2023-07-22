@@ -29,7 +29,7 @@ const TraderInfo = () => {
                          </div>
                     </div>
                     <div className="infoImgBox">
-                         <Image src={InfoImage} alt="InfoImage" />
+                         <Image priority src={InfoImage} alt="InfoImage" />
                          <div className="brightShadow"></div>
                     </div>
                </div>

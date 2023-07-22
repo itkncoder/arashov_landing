@@ -2,11 +2,7 @@ import axios from "axios"
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
-import Image from "next/image"
 import Head from "next/head"
-import Link from "next/link"
-import logo from "@/assets/images/Logo.png"
-import loginImg from "@/assets/images/login.png"
 
 function App() {    
   const { register, handleSubmit } = useForm()

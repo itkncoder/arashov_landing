@@ -13,11 +13,11 @@ const Price = () => {
     <section className="Price-section"> 
       <PriceData />
       <div className="sponsor">
-          <Image className="bigtel" src={Binance} alt="Binance" />
-          <Image className="bigtel" src={Payme} alt="Payme" />
-          <Image className="bigtel" src={Tether} alt="Tether" />
-          <Image className="nonetel" src={Humo} alt="Humo" />
-          <Image className="nonetel" src={Uzcard} alt="Uzcard" />
+          <Image priority className="bigtel" src={Binance} alt="Binance" />
+          <Image priority className="bigtel" src={Payme} alt="Payme" />
+          <Image priority className="bigtel" src={Tether} alt="Tether" />
+          <Image priority className="nonetel" src={Humo} alt="Humo" />
+          <Image priority className="nonetel" src={Uzcard} alt="Uzcard" />
      </div>
      <div className="payment-crypto">
       <Link href={localStorage.getItem('token') ? "/checkout" : "/profile/profile" } className="mezzardBold">KRIPTOVALYUTA ORQALI TO’LOV QILISH</Link>

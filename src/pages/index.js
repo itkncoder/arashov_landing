@@ -2,7 +2,7 @@ import { Competition, Contact, Footer, Main, Navbar, Price, TraderInfo, Usefull 
 import Head from "next/head"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react"
+import { memo, useEffect } from "react"
 import Layout from "@/layout/layout"
 
 function Index() {
@@ -45,4 +45,4 @@ function Index() {
     );
 }
 
-export default Index;
+export default memo(Index);
